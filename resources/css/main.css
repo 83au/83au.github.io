@@ -50,7 +50,7 @@ table {
 /* Styles */
 
 body {
-  background-color: mediumseagreen;
+	background: radial-gradient(mediumseagreen, forestgreen);
   font-family: 'Roboto', sans-serif;
 }
 
