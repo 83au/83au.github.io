@@ -67,6 +67,7 @@ p {
   font-size: 25px;
   line-height: 1.5em;
   opacity: 0.95;
+
 }
 
 h1 {
@@ -79,7 +80,12 @@ h1 {
 
 img {
 	border-radius: 12px;
-	float: right;
 	margin-right: 17%;
-	margin-top: 1%;
+	margin-top: 2%;
+}
+
+section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
