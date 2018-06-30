@@ -55,10 +55,10 @@ body {
 }
 
 p {
-  background-color: white;
+  background-color: #F7F7F7;
   border-radius: 6px;
   color: mediumseagreen;
-  padding: 0.7em;
+  padding: 0.7em 0.2em 0.7em 1.1em;
   margin-top: 2%;
   margin-left: 15%;
 	min-width: 380px;
@@ -67,11 +67,10 @@ p {
   font-size: 25px;
   line-height: 1.5em;
   opacity: 0.95;
-
 }
 
 h1 {
-  color: white;
+  color: #F7F7F7;
   font-size: 75px;
   margin-top: 10%;
   margin-left: 15%;
