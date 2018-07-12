@@ -54,6 +54,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 p {
   background-color: #F7F7F7;
   border-radius: 6px;
@@ -61,17 +67,17 @@ p {
   padding: 0.7em 0.2em 0.7em 1.1em;
   margin-top: 2%;
   margin-left: 15%;
-	min-width: 380px;
-	max-width: 450px;
-	max-height: 450px;
-  font-size: 25px;
+	min-width: 25%;
+	max-width: 36%;
+	max-height: 100%;
+  font-size: 1.57rem;
   line-height: 1.5em;
   opacity: 0.95;
 }
 
 h1 {
   color: #F7F7F7;
-  font-size: 75px;
+  font-size: 4.7rem;
   margin-top: 10%;
   margin-left: 15%;
   opacity: 0.9;
@@ -81,10 +87,4 @@ img {
 	border-radius: 12px;
 	margin-right: 17%;
 	margin-top: 2%;
-}
-
-section {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 }
