@@ -54,10 +54,20 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+h1 {
+  color: #F7F7F7;
+  font-size: 4.7rem;
+  margin-top: 10%;
+  margin-left: 15%;
+  opacity: 0.9;
+}
+
 section {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	padding: 1%;
+	min-height: 330px;
 }
 
 p {
@@ -67,20 +77,11 @@ p {
   padding: 0.7em 0.2em 0.7em 1.1em;
   margin-top: 2%;
   margin-left: 15%;
-	min-width: 25%;
 	max-width: 36%;
 	max-height: 100%;
   font-size: 1.57rem;
   line-height: 1.5em;
   opacity: 0.95;
-}
-
-h1 {
-  color: #F7F7F7;
-  font-size: 4.7rem;
-  margin-top: 10%;
-  margin-left: 15%;
-  opacity: 0.9;
 }
 
 img {
