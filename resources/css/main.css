@@ -101,6 +101,9 @@ Media Queries
 	h1 {
 		font-size: 8rem;
 	}
+	section {
+		background: #F7F7F7;
+	}
 	p {
 		font-size: 3rem;
 		max-width: 50%;
