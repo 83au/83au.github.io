@@ -100,13 +100,14 @@ Media Queries
 @media only screen and (max-width: 320px), (orientation: portrait) {
 	h1 {
 		font-size: 8rem;
+		margin-left: 0.5rem;
+		margin-bottom: 0.5rem;
 	}
 	section {
 		background: #F7F7F7;
 	}
 	p {
-		font-size: 3rem;
+		font-size: 2rem;
 		max-width: 50%;
-		margin-left: 5%;
 	}
 }
