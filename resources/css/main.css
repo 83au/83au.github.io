@@ -107,5 +107,9 @@ Media Queries
 		font-size: 2rem;
 		max-width: 60%;
 		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+	img {
+		margin-right: 5%; 
 	}
 }
