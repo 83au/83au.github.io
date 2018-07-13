@@ -89,3 +89,20 @@ img {
 	margin-right: 17%;
 	margin-top: 2%;
 }
+
+
+/*
+============================+
+Media Queries
+=============================
+*/
+
+@media only screen and (max-width: 320px), (orientation: portrait) {
+	h1 {
+		font-size: 6rem;
+	}
+	p {
+		font-size: 2rem;
+		max-width: 40%;
+	}
+}
