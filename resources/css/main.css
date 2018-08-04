@@ -114,21 +114,20 @@ p {
   font-size: 1.5rem;
   line-height: 1.5em;
   padding: 1rem 0.7rem 1rem 1.7rem;
-	margin-left: 6rem;
-  margin-right: 2rem;
+	margin-left: 5rem;
   border-radius: 6px;
 }
 
 img {
   border-radius: 6px;
-  margin-left: 4rem;
+	margin-right: 5rem;
 }
 
 /* Footer */
 
 footer {
-	margin: 5rem 0 0 0;
-	padding-left: 5rem;
+	margin-top: 5rem;
+	text-align: center;
 }
 
 @media only screen and (max-width: 680px), (orientation: portrait) {
@@ -167,6 +166,7 @@ footer {
 	footer {
 		text-align: center;
 		padding-left: 0;
+		padding-bottom: 4rem;
 		margin-top: 2rem;
 	}
 }
