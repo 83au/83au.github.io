@@ -86,8 +86,14 @@ h1 {
   margin-left: 3rem;
 }
 
+a {
+	transition-property: color;
+	transition: all 1s;
+}
+
 a:hover {
 	color: #FFF900;
+	font-size: 5.5rem;
 }
 
 /* About Me Section */
