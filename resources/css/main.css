@@ -109,12 +109,6 @@ h4 {
   font-size: 2.5rem;
 	margin-left: 7rem;
 	margin-bottom: 2rem;
-	transition: font-size 3s;
-	max-width: 35%;
-}
-
-h4:hover {
-	font-size: 2.8rem;
 }
 
 div {
@@ -132,11 +126,12 @@ p {
   padding: 1rem 0.7rem 1rem 1.7rem;
 	margin-left: 5rem;
   border-radius: 6px;
-	transition: box-shadow 2s;
+	transition: all 2s;
 }
 
 p:hover {
-	box-shadow: 5px 5px 5px #2A2B2B;
+	box-shadow: -5px 5px 5px #2A2B2B;
+	text-shadow: -2px 2px 1px #2A2B2B;
 }
 
 img {
@@ -156,6 +151,9 @@ footer {
 	margin-top: 5rem;
 	text-align: center;
 }
+
+
+/* Media Query */
 
 @media only screen and (max-width: 680px), (orientation: portrait) {
 	section {
