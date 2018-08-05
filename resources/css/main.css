@@ -109,6 +109,12 @@ h4 {
   font-size: 2.5rem;
 	margin-left: 7rem;
 	margin-bottom: 2rem;
+	transition: font-size 3s;
+	max-width: 18%;
+}
+
+h4:hover {
+	font-size: 2.8rem;
 }
 
 div {
@@ -126,11 +132,22 @@ p {
   padding: 1rem 0.7rem 1rem 1.7rem;
 	margin-left: 5rem;
   border-radius: 6px;
+	transition: box-shadow 2s;
+}
+
+p:hover {
+	box-shadow: 5px 5px 5px #2A2B2B;
 }
 
 img {
   border-radius: 6px;
 	margin-right: 5rem;
+	transition: all 2s;
+}
+
+img:hover {
+	box-shadow: 5px 5px 5px #2A2B2B;
+	height: 310px
 }
 
 /* Footer */
