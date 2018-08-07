@@ -86,12 +86,12 @@ h1 {
   margin-left: 3rem;
 }
 
-a {
+.hero {
 	transition-property: color;
 	transition: all 1s;
 }
 
-a:hover {
+.hero:hover {
 	color: #FFF900;
 	font-size: 5.5rem;
 }
@@ -138,11 +138,11 @@ img {
   border-radius: 6px;
 	margin-right: 5rem;
 	transition: all 2s;
+	border: 3px solid rgba(255, 255, 255, .7);
 }
 
 img:hover {
 	box-shadow: 5px 5px 5px #2A2B2B;
-	height: 310px
 }
 
 /* Footer */
@@ -152,6 +152,31 @@ footer {
 	text-align: center;
 }
 
+h5 a {
+	text-decoration: none;
+	color: black;
+}
+
+h5 a:hover {
+	color: white;
+}
+
+a i {
+	color: black;
+	margin: 0 1rem;
+}
+
+a i:hover {
+	color: white;
+}
+
+a i:visited {
+	color: #21DAF2;
+}
+
+.copy {
+	margin-top: 3rem;
+}
 
 /* Media Query */
 
@@ -192,6 +217,10 @@ footer {
 		text-align: center;
 		padding-left: 0;
 		padding-bottom: 2rem;
-		margin-top: 14rem;
+		margin-top: 5rem;
+	}
+
+	.copy {
+		margin-top: 10rem;
 	}
 }
