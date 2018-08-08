@@ -164,7 +164,7 @@ h5 a:hover {
 
 a i {
 	color: black;
-	margin: 0 1rem;
+	margin: 0 .2rem;
 	transition: color 500ms;
 }
 
