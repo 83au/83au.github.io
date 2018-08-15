@@ -139,6 +139,7 @@ p:hover {
 	height: 5.5rem;
 	min-width: 23%;
 	margin: 10% 10% 0 0;
+	border-radius: 4px;
 }
 
 img {
@@ -148,14 +149,10 @@ img {
 	bottom: 5rem;
 }
 
-img:hover {
-	box-shadow: 5px 5px 5px #2A2B2B;
-}
-
 /* Footer */
 
 footer {
-	margin-top: 5rem;
+	margin-top: 3.7rem;
 	text-align: center;
 }
 
