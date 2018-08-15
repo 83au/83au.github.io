@@ -135,9 +135,9 @@ p:hover {
 }
 
 .image-container {
-	border: 1px solid white;
-	height: 5rem;
-	min-width: 25%;
+	background: darkgray;
+	height: 5.5rem;
+	min-width: 23%;
 	margin: 10% 10% 0 0;
 }
 
@@ -227,7 +227,7 @@ a i:visited {
 	}
 
 	.image-container {
-		border: none;
+		background: none;
 		margin: 0 5%;
 		min-height: 150px;
 		width: auto;
