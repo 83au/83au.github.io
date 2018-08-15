@@ -215,7 +215,7 @@ a i:visited {
 		min-width: 315px;
 		max-width: 400px;
 		font-size: 1.5rem;
-		margin: 19% auto;
+		margin: 7% auto;
 	}
 
 	.content-container {
@@ -228,11 +228,15 @@ a i:visited {
 
 	.image-container {
 		border: none;
-		margin: 10% 5% 0 5%;
+		margin: 0 5%;
+		min-height: 150px;
+		width: auto;
 	}
 
 	img {
 		bottom: 0;
+		height: 100%;
+		width: auto;
 	}
 
 	footer {
