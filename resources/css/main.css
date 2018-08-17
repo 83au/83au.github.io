@@ -180,6 +180,10 @@ a i:visited {
 	color: #21DAF2;
 }
 
+.mobile-i {
+	display: none;
+}
+
 .copy {
 	margin-top: 3rem;
 }
@@ -243,7 +247,23 @@ a i:visited {
 		margin-top: 5rem;
 	}
 
+	h5 a {
+		font-size: 2rem;
+		color: white;
+	}
+
+	.desktop-i {
+		display: none;
+	}
+
+	.mobile-i {
+		display: inline-block;
+		margin: 1rem auto 2rem auto;
+		color: white;
+	}
+
 	.copy {
-		margin-top: 10rem;
+		margin-top: 5rem;
+		color: white;
 	}
 }
