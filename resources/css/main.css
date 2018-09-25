@@ -118,13 +118,13 @@ footer {
   }
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1050px), (orientation: portrait) {
   h1 {
     font-size: 3rem;
   }
 }
 
-@media only screen and (max-width: 965px) {
+@media only screen and (max-width: 965px), (orientation: portrait) {
   .container {
     flex-direction: column;
     justify-content: flex-start;
@@ -145,7 +145,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 536px) {
+@media only screen and (max-width: 536px), (orientation: portrait) {
   .about {
     max-width: 97%;
   }
@@ -160,7 +160,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 414px), (orientation: portrait) {
   h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
