@@ -12,6 +12,8 @@ html {
 html {
   font-size: 16px;
   font-family: 'Montserrat', sans-serif;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 
@@ -25,7 +27,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 650px;
+  margin-top: 4rem;
 }
 
 h1 {
@@ -105,7 +107,7 @@ i:hover {
 footer {
   text-align: center;
   color: #227569;
-  margin-bottom: 1rem;
+  margin-top: 4rem;
 }
 
 @media only screen and (max-width: 1130px) {
@@ -161,6 +163,9 @@ footer {
 }
 
 @media only screen and (max-width: 414px), (orientation: portrait) {
+  .container {
+    margin-top: 1rem;
+  }
   h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
