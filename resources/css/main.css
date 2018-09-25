@@ -39,6 +39,7 @@ h1 {
 
 .about {
   max-width: 50%;
+  margin-top: 2rem;
 }
 
 p {
@@ -74,7 +75,7 @@ em a:hover {
   align-items: center;
   height: 10rem;
   position: relative;
-  top: 5rem;
+  top: 8rem;
 }
 
 .contact img {
@@ -108,13 +109,16 @@ footer {
   text-align: center;
   color: #227569;
   margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 @media only screen and (max-width: 1130px) {
+  .about {
+    margin-top: 3rem;
+  }
   h1 {
     font-size: 3.2rem;
   }
-
   p {
     font-size: 1.5rem;
   }
@@ -130,10 +134,10 @@ footer {
   .container {
     flex-direction: column;
     justify-content: flex-start;
+    margin-top: 1rem;
   }
   .about {
     max-width: 90%;
-    margin-top: 3rem;
   }
   .contact {
     justify-content: center;
@@ -145,6 +149,9 @@ footer {
   .icons {
     bottom: 0;
   }
+  footer {
+    margin-top: 9rem;
+  }
 }
 
 @media only screen and (max-width: 536px) {
@@ -152,26 +159,21 @@ footer {
     max-width: 97%;
   }
   h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
   }
   p {
-    font-size: 1.2rem;
+    line-height: 1.5;
+    letter-spacing: .15rem;
   }
   .contact {
     width: 85%;
+    top: 3rem;
   }
 }
 
 @media only screen and (max-width: 414px) {
-  .container {
-    margin-top: 1rem;
-  }
   h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  p {
-    font-size: 1rem;
+    font-size: 4.5rem;
   }
   i {
     transform: scale(.8);
