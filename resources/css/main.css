@@ -30,10 +30,6 @@ body {
   margin-top: 4rem;
 }
 
-.mobile-header {
-  display: none;
-}
-
 h1 {
   font-size: 3.5rem;
   font-family: 'Open Sans', sans-serif;
@@ -179,12 +175,6 @@ footer {
   .about {
     margin-top: 1rem;
     max-width: 95%;
-  }
-  .desktop-header {
-    display: none;
-  }
-  .mobile-header {
-    display: block;
   }
   h1 {
     font-size: 4.5rem;
