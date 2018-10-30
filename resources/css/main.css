@@ -20,7 +20,8 @@ html {
 /* === Main Styles === */
 
 body {
-  background: linear-gradient(#227569, #393A7D);
+  background: #4C4DA6;
+  background-image: url("../images/cartographer.png");
 }
 
 .container {
@@ -51,7 +52,6 @@ p {
 
 strong {
   font-weight: bold;
-  text-decoration: underline;
 }
 
 em a {
@@ -59,16 +59,15 @@ em a {
   transition: all 500ms;
 }
 
-em a:visited {
-  color: yellow;
-}
-
 em a:hover {
   color: #E3D90F;
-  font-size: 2.2rem;
+  font-size: 2rem;
   text-shadow: 0 0 10px #13DB94;
 }
 
+em a:visited {
+  color: yellow;
+}
 
 .contact {
   border: 3px solid #227569;
@@ -103,7 +102,7 @@ i {
   transition: all 500ms;
 }
 
-.icons a:visited {
+i:visited {
   color: yellow;
 }
 
@@ -153,6 +152,11 @@ footer {
   }
   .contact img {
     display: none;
+  }
+  em a:active, i:active {
+    color: #E3D90F;
+    font-size: 2rem;
+    text-shadow: 0 0 10px #13DB94;
   }
   .icons {
     bottom: 0;
