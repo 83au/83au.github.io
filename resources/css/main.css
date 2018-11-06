@@ -243,11 +243,6 @@ a .fa:active {
   transform: scale(1.5);
 }
 
-footer {
-  text-align: center;
-  color: #4C4DA6;
-}
-
 
 /* === Media Queries === */
 
@@ -337,9 +332,6 @@ footer {
   }
   a .fa:active {
     transform: scale(3);
-  }
-  footer span {
-    font-size: 1.5rem;
   }
 }
   /* Desktop */
