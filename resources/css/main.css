@@ -101,7 +101,7 @@ h4 {
 
 .arrow.top {
   position: relative;
-  top: 12rem;
+  top: 10rem;
 }
 
 /* === About === */
@@ -157,6 +157,7 @@ p {
 .arrow.mid {
   border-left-color: #30A66E;
   border-bottom-color: #30A66E;
+  margin-bottom: 2rem;
 }
 
 /* === Skills & Tools === */
@@ -192,7 +193,7 @@ p {
 }
 
 .arrow.bottom {
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 /* === Contact === */
@@ -250,7 +251,7 @@ footer {
 
 /* === Media Queries === */
 
-@media only screen and (min-width: 725px) {
+@media only screen and (min-width: 605px) {
   section {
     height: 60rem;
   }
@@ -275,10 +276,10 @@ footer {
   }
   .hero h1 {
     width: 80%;
-    font-size: 6.5rem;
+    font-size: 6rem;
   }
   .banner p {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .arrow.top {
     top: 18.5rem;
@@ -291,7 +292,7 @@ footer {
     text-align: center;
     margin: 3rem auto 8rem auto;
 
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
   img {
     float: left;
@@ -303,16 +304,16 @@ footer {
   }
   p {
     padding: 1rem;
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   .arrow.mid {
     margin: 7rem auto 0 auto;
   }
   .col h4 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   .col ul li {
-    font-size: 2.3rem;
+    font-size: 2rem;
     line-height: 1.4;
     font-weight: 300;
   }
@@ -321,7 +322,7 @@ footer {
   }
   .contact h3 {
     bottom: 4rem;
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
   .icons a {
     width: 7rem;
