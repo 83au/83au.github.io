@@ -283,7 +283,7 @@ footer {
     font-size: 2rem;
   }
   .arrow.top {
-    top: 18.5rem;
+    top: 17rem;
   }
   .about {
     display: block;
@@ -308,7 +308,7 @@ footer {
     font-size: 2rem;
   }
   .arrow.mid {
-    margin: 7rem auto 0 auto;
+    margin: 4rem auto 0 auto;
   }
   .col h4 {
     font-size: 4rem;
@@ -319,7 +319,7 @@ footer {
     font-weight: 300;
   }
   .arrow.bottom {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   .contact h3 {
     bottom: 4rem;
