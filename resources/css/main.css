@@ -249,7 +249,7 @@ a .fa:active {
   /* Tablet */
 @media only screen and (min-width: 530px) {
   section {
-    height: 54rem;
+    height: 56rem;
   }
   .arrow {
     border-left: 3px solid #41E697;
@@ -286,7 +286,7 @@ a .fa:active {
   }
   .about h2 {
     text-align: center;
-    margin: 3rem auto 8rem auto;
+    margin: 1rem auto 8rem auto;
 
     font-size: 4.5rem;
   }
@@ -303,7 +303,7 @@ a .fa:active {
     font-size: 2rem;
   }
   .arrow.mid {
-    margin: 3.5rem auto 0 auto;
+    margin: 3rem auto 0 auto;
   }
   .col h4 {
     font-size: 4rem;
@@ -314,7 +314,7 @@ a .fa:active {
     font-weight: 300;
   }
   .arrow.bottom {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
   .contact h3 {
     bottom: 4rem;
