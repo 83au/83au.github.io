@@ -1,41 +1,92 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Beau Sherman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./resources/css/reset.css" type="text/css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200|Open+Sans:300,300i,400|Shadows+Into+Light" rel="stylesheet">
     <link href="./resources/css/main.css" type="text/css" rel="stylesheet">
-    <title>Beau Sherman</title>
   </head>
 
   <body>
 
-    <div class="container">
-      <div class="about">
-        <h1>Hi, I'm Beau Sherman</h1>
-        <p>I'm an aspiring <strong>Front End Developer</strong>. I have
-          been studying web development for six months. So far I have learned
-          HTML, CSS, responsive design, the Bash Shell terminal, and Git. I am
-          currently enrolled in Harvard's CS50x course on edX. Check out my
-          <em><a href="https://github.com/83au">GitHub</a></em>
-          to see my projects and follow me on my learning journey.</p>
-      </div>
+    <!-- Hero -->
 
-      <div class="contact">
-        <img src="./resources/images/new-headshot.jpg" alt="Beau Sherman" height="200px">
-        <div class="icons">
-          <a href="https://www.facebook.com/beau.sherman.3"><i class="fa fa-facebook fa-3x"></i></a>
-          <a href="https://github.com/83au"><i class="fa fa-github fa-3x"></i></a>
-          <a href="mailto:brsherman88@gmail.com"><i class="fa fa-envelope fa-3x"></i></a>
-        </div>
+    <section class="banner">
+      <div class="hero">
+        <h1>Beau Sherman</h1>
+        <p>Front End Developer</p>
       </div>
-    </div>
+      <a href="#about">
+        <div class="arrow top">
+          <span>X</span>
+        </div>
+      </a>
+    </section>
+
+    <!-- About -->
+
+    <section class="about" id="about">
+      <h2> About Me</h2>
+      <img src="./resources/images/new-headshot.jpg" alt="Beau Sherman" height="250px">
+      <p>Hi, I'm Beau. I'm an aspiring Front End Developer living in Southern
+        California. I'm currently enrolled in Harvard's CS50x course on edX. I
+        gain new skills in web development everyday. Check out my
+        <a href="#">GitHub</a> to see my projects and follow me on
+        my learning journey.</p>
+      <a href="#skill">
+        <div class="arrow mid">
+          <span>X</span>
+        </div>
+      </a>
+    </section>
+
+    <!-- Tools -->
+
+    <section class="skills-tools" id="skill">
+      <div class="col skills">
+        <h4>Skills</h4>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>Bash Shell Terminal</li>
+          <li>Bootstrap4</li>
+        </ul>
+      </div>
+      <div class="col tools">
+        <h4>Tools</h4>
+        <ul>
+          <li>Git</li>
+          <li>Atom/Sublime</li>
+          <li>Photoshop</li>
+        </ul>
+      </div>
+      <a href="#cont">
+        <div class="arrow bottom">
+          <span>X</span>
+        </div>
+      </a>
+    </section>
+
+    <!-- Contact -->
+
+    <section class="contact" id="cont">
+      <h3>Contact Me</h3>
+      <div class="icons">
+        <a href="https://www.facebook.com/beau.sherman.3"><i class="fa fa-facebook fa-3x"></i></a>
+        <a href="https://github.com/83au"><i class="fa fa-github fa-3x"></i></a>
+        <a href="mailto:brsherman88@gmail.com"><i class="fa fa-envelope fa-3x"></i></a>
+      </div>
+    </section>
 
     <footer>
       <span>&copy; Beau Sherman 2018</span>
     </footer>
+
   </body>
+
 </html>
