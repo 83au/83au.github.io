@@ -251,9 +251,10 @@ footer {
 
 /* === Media Queries === */
 
+  /* Tablet */
 @media only screen and (min-width: 530px) {
   section {
-    height: 60rem;
+    height: 50rem;
   }
   .arrow {
     border-left: 3px solid #41E697;
@@ -341,17 +342,17 @@ footer {
     font-size: 1.5rem;
   }
 }
-
-@media only screen and (min-width: 700px), (orientation: landscape) {
+  /* Desktop */
+@media only screen and (min-width: 900px), (orientation: landscape) {
   section {
     height: 41rem;
   }
   .hero h1 {
-    width: 50%;
-    font-size: 5.5rem;
+    width: 65%;
+    font-size: 6rem;
   }
   .banner p {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .arrow.top {
     top: 8.5rem;
