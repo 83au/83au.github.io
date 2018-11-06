@@ -254,7 +254,7 @@ footer {
   /* Tablet */
 @media only screen and (min-width: 530px) {
   section {
-    height: 50rem;
+    height: 54rem;
   }
   .arrow {
     border-left: 3px solid #41E697;
@@ -283,7 +283,7 @@ footer {
     font-size: 2rem;
   }
   .arrow.top {
-    top: 17rem;
+    top: 15rem;
   }
   .about {
     display: block;
@@ -308,7 +308,7 @@ footer {
     font-size: 2rem;
   }
   .arrow.mid {
-    margin: 4rem auto 0 auto;
+    margin: 3.5rem auto 0 auto;
   }
   .col h4 {
     font-size: 4rem;
@@ -319,7 +319,7 @@ footer {
     font-weight: 300;
   }
   .arrow.bottom {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
   }
   .contact h3 {
     bottom: 4rem;
