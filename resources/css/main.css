@@ -27,6 +27,15 @@ footer {
   background: #FCFCFC;
 }
 
+.arrows {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 3rem;
+  height: 4rem;
+}
+
 .arrow {
   width: 1rem;
   height: 1rem;
@@ -37,18 +46,33 @@ footer {
   transition: .3s;
 }
 
-.arrow span {
+.arrow-up {
+  width: 1rem;
+  height: 1rem;
+  border-left: 2px solid #41E697;
+  border-bottom: 2px solid #41E697;
+
+  transform: rotate(135deg);
+  transition: .3s;
+}
+
+
+
+.arrow span,
+.arrow-up span {
   opacity: 0;
 }
 
-.arrow:hover {
+.arrow:hover,
+.arrow-up:hover {
   width: 1.5rem;
   height: 1.5rem;
   border-left: 3px solid #41E6FF;
   border-bottom: 3px solid #41E6FF;
 }
 
-.arrow:active {
+.arrow:active,
+.arrow-up:active {
   width: 1.5rem;
   height: 1.5rem;
   border-left: 3px solid #41E6FF;
@@ -72,7 +96,7 @@ h4 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 
   background: #6768E0;
   background-image: url("../images/cartographer.png");
@@ -80,6 +104,8 @@ h4 {
 }
 
 .hero {
+  position: relative;
+  top: 12rem;
   width: 100%;
   text-align: center;
 }
@@ -99,9 +125,8 @@ h4 {
   font-style: italic;
 }
 
-.arrow.top {
-  position: relative;
-  top: 10rem;
+.banner a {
+  margin-bottom: 2rem;
 }
 
 /* === About === */
@@ -111,6 +136,7 @@ h4 {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  padding: 1rem;
 }
 
 .about h2 {
@@ -126,8 +152,6 @@ img {
 }
 
 p {
-  padding: 1rem;
-
   color: #0D0D0D;
 
   font-size: 1.4rem;
@@ -154,10 +178,9 @@ p {
   color: #C84DA6;
 }
 
-.arrow.mid {
+.mid div {
   border-left-color: #30A66E;
   border-bottom-color: #30A66E;
-  margin-bottom: 2rem;
 }
 
 /* === Skills & Tools === */
@@ -173,6 +196,11 @@ p {
   color: white;
 }
 
+.columns {
+  display: flex;
+  flex-direction: column;
+}
+
 .col {
   margin: 0;
   width: 100%;
@@ -180,7 +208,7 @@ p {
 
 .col h4 {
   margin: 1rem auto;
-  width: 25%;
+  width: 90%;
 
   font-size: 2.5rem;
 }
@@ -192,9 +220,6 @@ p {
   line-height: 1.5;
 }
 
-.arrow.bottom {
-  margin-bottom: 3rem;
-}
 
 /* === Contact === */
 
@@ -202,14 +227,11 @@ p {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   text-align: center;
 }
 
 .contact h3 {
-  position: relative;
-  bottom: 3rem;
-
   color: #4C4DA6;
 
   font-size: 2.5rem;
@@ -243,13 +265,27 @@ a .fa:active {
   transform: scale(1.5);
 }
 
+.contact > a {
+  text-decoration: none;
+}
+
+.contact p {
+  color: #4C4DA6;
+  text-decoration: underline;
+  transition: color .4s;
+}
+
+.contact p:hover {
+  color: #FD465A;
+}
+
 
 /* === Media Queries === */
 
   /* Tablet */
 @media only screen and (min-width: 530px) {
   section {
-    height: 56rem;
+    height: 55rem;
   }
   .arrow {
     border-left: 3px solid #41E697;
@@ -257,14 +293,22 @@ a .fa:active {
     width: 2rem;
     height: 2rem;
   }
-  .arrow:hover {
+  .arrow-up {
+    border-left: 3px solid #41E697;
+    border-bottom: 3px solid #41E697;
+    width: 2rem;
+    height: 2rem;
+  }
+  .arrow:hover,
+  .arrow-up:hover {
     border-left: 4px solid #41E6FF;
     border-bottom: 4px solid #41E6FF;
     width: 2.5rem;
     height: 2.5rem;
   }
 
-  .arrow:active {
+  .arrow:active,
+  .arrow-up:active {
     border-left: 4px solid #41E6FF;
     border-bottom: 4px solid #41E6FF;
     width: 2.5rem;
@@ -277,16 +321,9 @@ a .fa:active {
   .banner p {
     font-size: 2rem;
   }
-  .arrow.top {
-    top: 15rem;
-  }
-  .about {
-    display: block;
-    padding: 1rem;
-  }
   .about h2 {
     text-align: center;
-    margin: 1rem auto 8rem auto;
+    margin: 1rem auto 1rem auto;
 
     font-size: 4.5rem;
   }
@@ -299,11 +336,7 @@ a .fa:active {
     shape-outside: circle();
   }
   p {
-    padding: 1rem;
     font-size: 2rem;
-  }
-  .arrow.mid {
-    margin: 3rem auto 0 auto;
   }
   .col h4 {
     font-size: 4rem;
@@ -312,9 +345,6 @@ a .fa:active {
     font-size: 2rem;
     line-height: 1.4;
     font-weight: 300;
-  }
-  .arrow.bottom {
-    margin-bottom: 4rem;
   }
   .contact h3 {
     bottom: 4rem;
@@ -335,7 +365,7 @@ a .fa:active {
   }
 }
   /* Desktop */
-@media only screen and (min-width: 900px), (orientation: landscape) {
+@media only screen and (min-width: 900px) and (orientation: landscape) {
   section {
     height: 41rem;
   }
@@ -347,10 +377,7 @@ a .fa:active {
     font-size: 3rem;
   }
   .arrow.top {
-    top: 8.5rem;
-  }
-  .about {
-    padding-top: 1rem;
+    position: relative;
   }
   .about h2 {
     margin: 2rem auto 5rem auto;
@@ -358,43 +385,26 @@ a .fa:active {
   p {
     font-size: 2rem;
   }
-  .arrow.mid {
-    margin-top: 5rem;
-  }
-  .skills-tools {
-    display: flex;
+  .columns {
+    position: relative;
+    top: 3rem;
     flex-direction: row;
-    align-items: center;
+    width: 100%;
   }
   .col h4 {
     width: 50%;
     font-size: 5rem;
   }
   .col ul li {
+    margin-bottom: 2rem;
     font-size: 2rem;
-    line-height: 1.4;
+    line-height: 1.5;
     font-weight: 300;
   }
-  .tools {
-    position: relative;
-    bottom: 1rem;
-  }
-  .skills-tools a {
-    align-self: flex-end;
-    position: relative;
-    bottom: 8%;
-    right: 48%;
-  }
   .contact {
-    justify-content: flex-start;
     padding: 2rem;
   }
   .contact h3 {
-    bottom: 0;
-    top: 4rem;
-
-    margin-bottom: 10rem;
-
     font-size: 4rem;
   }
   .icons {
@@ -414,9 +424,9 @@ a .fa:active {
     transform: scale(1.5);
   }
   a .fa:hover {
-    transform: scale(1.5);
+    transform: scale(2);
   }
   a .fa:active {
-    transform: scale(1.5);
+    transform: scale(2);
   }
 }
