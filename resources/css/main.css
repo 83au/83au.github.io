@@ -29,17 +29,20 @@ footer {
 
 .arrows {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  width: 3rem;
+
+  width: 6rem;
   height: 4rem;
   margin-bottom: 2.5rem;
 }
 
 .arrow {
-  width: 1rem;
-  height: 1rem;
+  position: relative;
+  bottom: .9rem;
+  width: 1.3rem;
+  height: 1.3rem;
   border-left: 2px solid #41E697;
   border-bottom: 2px solid #41E697;
 
@@ -48,16 +51,14 @@ footer {
 }
 
 .arrow-up {
-  width: 1rem;
-  height: 1rem;
+  width: 1.3rem;
+  height: 1.3rem;
   border-left: 2px solid #41E697;
   border-bottom: 2px solid #41E697;
 
   transform: rotate(135deg);
   transition: .3s;
 }
-
-
 
 .arrow span,
 .arrow-up span {
@@ -292,11 +293,15 @@ a .fa:active {
   section {
     height: 55rem;
   }
+  .arrows {
+    width: 8rem;
+  }
   .arrow {
     border-left: 3px solid #41E697;
     border-bottom: 3px solid #41E697;
     width: 2rem;
     height: 2rem;
+    bottom: 1.2rem;
   }
   .arrow-up {
     border-left: 3px solid #41E697;
