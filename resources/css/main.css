@@ -116,7 +116,9 @@ h4 {
   border-bottom: 3px solid #41E6FF;
   margin: 0 auto;
   width: 83%;
-
+  animation-name: toright;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
   font-size: 3.5rem;
   font-family: 'Shadows Into Light', cursive;
 }
@@ -125,6 +127,9 @@ h4 {
   color: #41E6FF;
   font-size: 1.5rem;
   font-style: italic;
+  animation-name: toleft;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 .banner a {
@@ -272,6 +277,8 @@ a .fa:active {
 }
 
 .contact > a {
+  position: relative;
+  bottom: 2rem;
   text-decoration: none;
 }
 
@@ -285,6 +292,18 @@ a .fa:active {
   color: #FD465A;
 }
 
+
+/* === Key Frames === */
+
+@keyframes toright {
+  from {transform: translateX(-1000px)}
+  to {transform: translateX(0px)}
+}
+
+@keyframes toleft {
+  from {transform: translateX(1000px)}
+  to {transform: translateX(0px)}
+}
 
 /* === Media Queries === */
 
@@ -389,14 +408,14 @@ a .fa:active {
   .banner p {
     font-size: 3rem;
   }
-  .arrow.top {
-    position: relative;
-  }
   .about h2 {
     margin: 2rem auto 5rem auto;
   }
   p {
     font-size: 2rem;
+  }
+  .skills-tools div:last-child {
+    margin-bottom: 0.2rem;
   }
   .columns {
     position: relative;
