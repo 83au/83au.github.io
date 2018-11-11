@@ -24,7 +24,7 @@ section {
 .about,
 .contact,
 footer {
-  background: #FCFCFC;
+  background: #ECEDFA;
 }
 
 .arrows {
@@ -130,12 +130,8 @@ h4 {
 }
 
 .banner a {
-  animation-name: bounce;
-  animation-duration: .3s;
-  animation-fill-mode: backwards;
-  animation-iteration-count: 4;
-  animation-delay: 1s;
-  animation-direction: alternate;
+  animation: bounce .3s 1s 4 backwards alternate;
+  /* name duration delay iteration fill direction */
 }
 
 /* === About === */
