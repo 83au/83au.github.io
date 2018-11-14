@@ -42,8 +42,8 @@ footer {
   position: relative;
   bottom: 1.2rem;
   padding: .8rem;
-  border-left: 2px solid #41E697;
-  border-bottom: 2px solid #41E697;
+  border-left: 2px solid #7CEDA2;
+  border-bottom: 2px solid #7CEDA2;
 
   transform: rotate(-45deg);
   transition: .3s;
@@ -51,8 +51,8 @@ footer {
 
 .arrow-up {
   padding: .8rem;
-  border-left: 2px solid #41E697;
-  border-bottom: 2px solid #41E697;
+  border-left: 2px solid #7CEDA2;
+  border-bottom: 2px solid #7CEDA2;
 
   transform: rotate(135deg);
   transition: .3s;
@@ -116,9 +116,7 @@ h4 {
   color: #41E6FF;
   font-size: 1.5rem;
   font-style: italic;
-  animation-name: toleft;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+  animation: toleft 1s forwards;
 }
 
 .banner a {
@@ -127,6 +125,8 @@ h4 {
 
 .arrow.top {
   margin-bottom: 2rem;
+  border-left: 2px solid #7CEDA2;
+  border-bottom: 2px solid #7CEDA2;
 }
 
 .banner a {
@@ -184,8 +184,8 @@ p {
 }
 
 .mid div {
-  border-left-color: #30A66E;
-  border-bottom-color: #30A66E;
+  border-left-color: #59946F;
+  border-bottom-color: #59946F;
 }
 
 /* === Skills & Tools === */
@@ -304,6 +304,7 @@ a .fa:active {
   to {transform: translateY(-40px)}
 }
 
+
 /* === Media Queries === */
 
   /* Tablet */
@@ -318,7 +319,7 @@ a .fa:active {
     border-left: 3px solid #41E697;
     border-bottom: 3px solid #41E697;
     padding: 1rem;
-    bottom: 1.2rem;
+    bottom: 1.5rem;
   }
   .arrow-up {
     border-left: 3px solid #41E697;
