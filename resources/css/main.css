@@ -35,6 +35,7 @@ h4 {
 
 h4 {
   display: inline-block;
+
   border-bottom: 1px solid white;
 }
 
@@ -43,11 +44,12 @@ h4 {
 
 nav {
   position: fixed;
+  z-index: 1;
+
+  padding: 1rem 1rem 1rem .3rem;
 
   background: #294F5C;
-  padding: 1rem 1rem 1rem .3rem;
   width: 100vw;
-  z-index: 1;
 }
 
 nav ul {
@@ -61,22 +63,31 @@ nav ul li {
 }
 
 nav a {
-  text-decoration: none;
-  color: #ECEDFA;
   transition: color .3s ease;
+
+  color: #ECEDFA;
+
+  text-decoration: none;
 }
 
 nav a:hover {
   color: #41E6FF;
 }
 
+nav a:active,
+nav a:focus {
+  color: #C84DA6;
+}
+
+
 /* === Banner === */
 
 .banner {
-  display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
+
+  display: flex;
 
   background: #6768E0;
   background-image: url("../images/cartographer.png");
@@ -87,49 +98,39 @@ nav a:hover {
   position: relative;
   top: 13rem;
   width: 100%;
+
   text-align: center;
 }
 
 .hero h1 {
-  border-bottom: 3px solid #41E6FF;
   margin: 0 auto;
-  width: 83%;
+
   animation-name: toright;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  font-size: 3.5rem;
+  border-bottom: 3px solid #41E6FF;
+  width: 83%;
+
   font-family: 'Shadows Into Light', cursive;
+  font-size: 3.5rem;
 }
 
 .banner p {
+  animation: toleft 1s forwards;
   color: #41E6FF;
+
   font-size: 1.5rem;
   font-style: italic;
-  animation: toleft 1s forwards;
-}
-
-.banner a {
-  margin-bottom: 2rem;
-}
-
-.arrow.top {
-  margin-bottom: 2rem;
-  border-left: 2px solid #00FF0F;
-  border-bottom: 2px solid #00FF0F;
-}
-
-.banner a {
-  animation: bounce .3s 1s 4 backwards alternate;
-  /* name duration delay iteration fill direction */
 }
 
 /* === About === */
 
 .about {
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  display: flex;
   padding: 1rem;
 }
 
@@ -149,9 +150,9 @@ p {
   color: #0D0D0D;
 
   font-size: 1.4rem;
+  font-weight: 300;
   line-height: 1.4;
   letter-spacing: .08rem;
-  font-weight: 300;
 }
 
 .about a {
@@ -167,42 +168,44 @@ p {
   color: #FD465A;
 }
 
-.about a:active {
+.about a:active,
+.about a:focus {
   color: #C84DA6;
 }
 
 .mid div {
-  border-left-color: #59946F;
   border-bottom-color: #59946F;
+  border-left-color: #59946F;
 }
+
 
 /* === Skills & Tools === */
 
 .skills-tools {
-  display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 
+  display: flex;
+  padding-top: 4rem;
+
   background: linear-gradient(#4C4DA6, #A82F3D);
   color: white;
-  padding-top: 4rem;
 }
 
 .skills-tools h3 {
   margin-bottom: 2rem;
-
   font-size: 3.5rem;
 }
 
 .columns {
-  display: flex;
   flex-direction: column;
+  display: flex;
 }
 
 .skills-tools .columns .col {
-  width: 100%;
   margin-bottom: 1rem;
+  width: 100%;
 }
 
 .columns .col h4 {
@@ -222,16 +225,19 @@ p {
 /* === Contact === */
 
 .contact {
-  display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+
+  display: flex;
+
   text-align: center;
 }
 
 .contact h3 {
-  position: relative;
   bottom: 1rem;
+  position: relative;
+
   color: #4C4DA6;
 
   font-size: 2.5rem;
@@ -239,9 +245,10 @@ p {
 }
 
 .icons {
-  display: flex;
   align-items: center;
   flex-direction: column;
+
+  display: flex;
 }
 
 .icons a {
@@ -260,7 +267,8 @@ a .fa:hover {
   transform: scale(1.5);
 }
 
-a .fa:active {
+a .fa:active,
+a .fa:focus {
   color: #FD465A;
   transform: scale(1.5);
 }
@@ -268,17 +276,15 @@ a .fa:active {
 .contact > a {
   position: relative;
   bottom: 2rem;
+
   text-decoration: none;
 }
 
 .contact p {
   color: #4C4DA6;
-  text-decoration: underline;
   transition: color .4s;
-}
 
-.contact p:hover {
-  color: #FD465A;
+  text-decoration: underline;
 }
 
 
@@ -294,11 +300,6 @@ a .fa:active {
   to {transform: translateX(0px)}
 }
 
-@keyframes bounce {
-  from {transform: translateY(0px)}
-  to {transform: translateY(-40px)}
-}
-
 
 /* === Media Queries === */
 
@@ -307,109 +308,140 @@ a .fa:active {
   section {
     height: 55rem;
   }
+
   .hero h1 {
     width: 90%;
     font-size: 6rem;
   }
+
   .banner p {
     font-size: 2rem;
   }
+
   .about h2 {
-    text-align: center;
     margin: 1rem auto 1rem auto;
 
     font-size: 4.5rem;
+    text-align: center;
   }
+
   img {
     float: left;
 
-    border-radius: 50%;
     display: inline-block;
     margin-right: 7rem;
     shape-outside: circle();
+
+    border-radius: 50%;
   }
+
   p {
     font-size: 2rem;
   }
+
   .columns {
     flex-direction: row;
     justify-content: space-around;
+
     width: 100%;
   }
+
   .col {
     margin-bottom: 2rem;
   }
+
   .col h4 {
     font-size: 4rem;
   }
+
   .col ul li {
     font-size: 2rem;
-    line-height: 1.4;
     font-weight: 300;
+    line-height: 1.4;
   }
+
   .contact h3 {
     bottom: 4rem;
     font-size: 4.5rem;
   }
+
   .icons a {
     width: 7rem;
   }
+
   a .fa {
     margin: 4rem 0;
     transform: scale(2);
   }
+
   a .fa:hover {
     transform: scale(3);
   }
+
   a .fa:active {
     transform: scale(3);
   }
 }
+
+
   /* Desktop */
 @media only screen and (min-width: 900px) and (orientation: landscape) {
   section {
     height: 41rem;
   }
+
   .hero h1 {
     width: 65%;
     font-size: 6rem;
   }
+
   .banner p {
     font-size: 3rem;
   }
+
   .about h2 {
     margin: 2rem auto 5rem auto;
   }
+
   p {
     font-size: 2rem;
   }
+
   .skills-tools div:last-child {
     margin-bottom: 0.2rem;
   }
 
+
   .skills-tools h3 {
     font-size: 4.5rem;
   }
+
   .columns {
+    flex-direction: row;
     position: relative;
     top: 3rem;
-    flex-direction: row;
+
     width: 100%;
   }
+
   .columns .col h4 {
     font-size: 2.5rem;
   }
+
   .columns .col ul li {
+    font-weight: 300;
     font-size: 1.5rem;
     line-height: 2.5;
-    font-weight: 300;
   }
+
   .contact {
     padding: 2rem;
   }
+
   .contact h3 {
     font-size: 4rem;
   }
+
   .icons {
     flex-direction: row;
     justify-content: space-around;
@@ -419,16 +451,20 @@ a .fa:active {
     margin-top: 1rem;
     width: 70%;
   }
+
   .icons a {
     width: 7rem;
   }
+
   a .fa {
     margin: 4rem 0;
     transform: scale(1.5);
   }
+
   a .fa:hover {
     transform: scale(2);
   }
+
   a .fa:active {
     transform: scale(2);
   }
