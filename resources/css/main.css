@@ -18,56 +18,13 @@ html {
 }
 
 section {
-  height: 37rem;
+  height: 35rem;
 }
 
 .about,
 .contact,
 footer {
   background: #ECEDFA;
-}
-
-.arrows {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-
-  width: 6rem;
-  height: 4rem;
-  margin-bottom: 2.5rem;
-}
-
-.arrow {
-  position: relative;
-  bottom: 1.2rem;
-  padding: .8rem;
-  border-left: 2px solid #7CEDA2;
-  border-bottom: 2px solid #7CEDA2;
-
-  transform: rotate(-45deg);
-  transition: .3s;
-}
-
-.arrow-up {
-  padding: .8rem;
-  border-left: 2px solid #7CEDA2;
-  border-bottom: 2px solid #7CEDA2;
-
-  transform: rotate(135deg);
-  transition: .3s;
-}
-
-.arrow:hover,
-.arrow-up:hover {
-  border-left: 3px solid #41E6FF;
-  border-bottom: 3px solid #41E6FF;
-}
-
-.arrow:active,
-.arrow-up:active {
-  border-left: 3px solid #41E6FF;
-  border-bottom: 3px solid #41E6FF;
 }
 
 h2,
@@ -79,6 +36,38 @@ h4 {
 
 h4 {
   border-bottom: 1px solid white;
+}
+
+
+/* === Navigation === */
+
+nav {
+  position: fixed;
+
+  background: #294F5C;
+  padding: 1rem;
+  width: 100vw;
+  z-index: 1;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  display: inline-block;
+  letter-spacing: .1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ECEDFA;
+  transition: color .3s ease;
+}
+
+nav a:hover {
+  color: #41E6FF;
 }
 
 /* === Banner === */
@@ -140,13 +129,13 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   padding: 1rem;
 }
 
 .about h2 {
   position: relative;
-  top: 2rem;
+  top: -1rem;
 
   font-size: 3rem;
   text-decoration: none;
@@ -195,9 +184,9 @@ p {
   align-items: center;
   text-align: center;
 
-  background: linear-gradient(#4C4DA6, #FD465A);
+  background: linear-gradient(#4C4DA6, #A82F3D);
   color: white;
-  padding-top: 2rem;
+  padding-top: 4rem;
 }
 
 .skills-tools h3 {
@@ -235,11 +224,13 @@ p {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   text-align: center;
 }
 
 .contact h3 {
+  position: relative;
+  bottom: 3rem;
   color: #4C4DA6;
 
   font-size: 2.5rem;
