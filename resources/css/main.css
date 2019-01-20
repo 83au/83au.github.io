@@ -339,25 +339,30 @@ a .fa:focus {
     font-size: 2rem;
   }
 
+  .skills-tools h3 {
+    margin: 2rem 0 3rem 0;
+    font-size: 5rem;
+  }
+
   .columns {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
 
     width: 100%;
   }
 
-  .col {
-    margin-bottom: 2rem;
+  .skills-tools .columns .col {
+    margin-bottom: 3rem;
   }
 
-  .col h4 {
-    font-size: 4rem;
-  }
-
-  .col ul li {
+  .columns .col h4 {
     font-size: 2rem;
+  }
+
+  .columns .col ul li {
+    font-size: 1.3rem;
     font-weight: 300;
-    line-height: 1.4;
+    line-height: 2;
   }
 
   .contact h3 {
@@ -370,16 +375,16 @@ a .fa:focus {
   }
 
   a .fa {
-    margin: 4rem 0;
-    transform: scale(2);
+    margin: 2.5rem 0;
+    transform: scale(1.4);
   }
 
   a .fa:hover {
-    transform: scale(3);
+    transform: scale(2);
   }
 
   a .fa:active {
-    transform: scale(3);
+    transform: scale(2);
   }
 }
 
