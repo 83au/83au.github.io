@@ -15,6 +15,7 @@ html {
 
   font-size: 16px;
   font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
 }
 
 section {
@@ -149,6 +150,7 @@ nav {
   margin: 0 .5rem 0 .5rem;
 
   font-size: 1rem;
+  font-weight: 400;
 }
 
 #menuToggle input:checked ~ ul {
@@ -274,7 +276,7 @@ p {
   text-align: center;
 
   display: flex;
-  padding-top: 8rem;
+  padding-top: 6rem;
 
   background: linear-gradient(#4C4DA6, #A82F3D);
   color: white;
