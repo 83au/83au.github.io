@@ -213,7 +213,7 @@ nav {
 
 .about h2 {
   position: relative;
-  top: -1rem;
+  bottom: 4rem;
 
   font-size: 3rem;
   text-decoration: none;
@@ -264,7 +264,7 @@ p {
   text-align: center;
 
   display: flex;
-  padding-top: 6rem;
+  padding-top: 5rem;
 
   background: linear-gradient(#4C4DA6, #A82F3D);
   color: white;
@@ -408,7 +408,7 @@ a .fa:focus {
   }
 
   .about h2 {
-    margin: 1rem auto 1rem auto;
+    margin: 1rem auto 2rem auto;
 
     font-size: 4.5rem;
     text-align: center;
@@ -512,7 +512,8 @@ a .fa:focus {
   }
 
   .about h2 {
-    margin: 2rem auto 5rem auto;
+    margin: 2rem auto 4rem auto;
+    bottom: 1rem;
   }
 
   p {
