@@ -529,10 +529,13 @@ a .fa:focus {
     font-size: 2rem;
   }
 
+  .skills-tools {
+    padding-top: 5rem;
+  }
+
   .skills-tools div:last-child {
     margin-bottom: 0.2rem;
   }
-
 
   .skills-tools h3 {
     font-size: 4.5rem;
