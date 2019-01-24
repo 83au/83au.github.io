@@ -42,6 +42,7 @@ h4 {
 
 /* === Navigation === */
 
+/*
 nav {
   position: fixed;
   z-index: 1;
@@ -51,33 +52,118 @@ nav {
   background: #4C4DA6;
   border-bottom: 1px solid #fff;
   width: 100vw;
+} */
+
+nav {
+  position: fixed;
+  z-index: 1;
 }
 
-nav ul {
+#menuToggle {
+  position: flex;
+
+  margin-left: 85vw;
+  margin-top: 1rem;
+
+  user-select: none;
+  -webkit-user-select: none;
+  z-index: 1;
+}
+
+#menuToggle input {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+
+  display: block;
+  height: 2rem;
+  width: 2rem;
+
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+
+  -webkit-touch-callout: none;
+}
+
+.burger {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   display: flex;
-  justify-content: space-around;
+  margin-top: -.4rem;
+
+  background: #ECEDFA;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
 }
 
-nav ul li {
+#menuToggle .burger span {
+  display: block;
+  margin-bottom: 5px;
+
+  background: #3D5EB5;
+  height: 4px;
+  width: 33px;
+  transition: all .5s ease-in-out;
+  z-index: 1;
+}
+
+#menuToggle input:checked ~ .burger span
+{
+  background: gray;
+  transform: translateY(-9px) rotate(-135deg);
+}
+
+#menuToggle input:checked ~ .burger span:nth-last-child(2)
+{
+  transform: scale(0);
+}
+
+#menuToggle input:checked ~ .burger span:nth-last-child(3)
+{
+  transform: translateY(9px) rotate(135deg);
+}
+
+#menu {
+  position: absolute;
+
+  display: flex;
+  margin: 1rem;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+
+  background: #ECEDFA;
+  list-style-type: none;
+  transform-origin: 0% 0%;
+  transform: translate(50%, -120%);
+  transition: all .5s ease;
+  width: 100vw;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+#menu li {
   display: inline-block;
-  letter-spacing: .1rem;
+  margin: 0 .5rem 0 .5rem;
+
+  font-size: 1rem;
 }
 
-nav a {
-  transition: color .3s ease;
+#menuToggle input:checked ~ ul {
+  transform: translate(-85%, -120%);
+}
 
-  color: #ECEDFA;
-
+#menu a {
+  color: #3D5EB5;
   text-decoration: none;
 }
 
-nav a:hover {
-  color: #41E6FF;
-}
-
-nav a:active,
-nav a:focus {
-  color: #C84DA6;
+#menu a:hover,
+#menu a:active,
+#menu a:focus {
+  color: #FD465A;
 }
 
 
@@ -90,7 +176,7 @@ nav a:focus {
 
   display: flex;
 
-  background: #6768E0;
+  background: #3D5EB5;
   background-image: url("../images/cartographer.png");
   color: #41E6FF;
 }
@@ -188,14 +274,14 @@ p {
   text-align: center;
 
   display: flex;
-  padding-top: 4rem;
+  padding-top: 8rem;
 
   background: linear-gradient(#4C4DA6, #A82F3D);
   color: white;
 }
 
 .skills-tools h3 {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-size: 3.5rem;
 }
 
@@ -205,7 +291,7 @@ p {
 }
 
 .skills-tools .columns .col {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   width: 100%;
 }
 
@@ -306,13 +392,25 @@ a .fa:focus {
 
   /* Tablet */
 @media only screen and (min-width: 530px) {
+  #menu {
+    justify-content: center;
+  }
+  #menu li {
+    margin: 0 2rem 0 0;
+    font-size: 1.3rem;
+  }
+
+  #menuToggle input:checked ~ ul {
+    transform: translate(-85%, -120%);
+  }
+
   section {
     height: 55rem;
   }
 
   .hero h1 {
-    width: 90%;
-    font-size: 6rem;
+    width: 70%;
+    font-size: 4rem;
   }
 
   .banner p {
@@ -392,6 +490,24 @@ a .fa:focus {
 
   /* Desktop */
 @media only screen and (min-width: 900px) and (orientation: landscape) {
+  .burger {
+    margin-top: -.3rem;
+  }
+
+  #menu {
+    justify-content: center;
+    transform: translate(50%, -110%);
+  }
+
+  #menu li {
+    font-size: 1.5rem;
+    margin-right: 6rem;
+  }
+
+  #menuToggle input:checked ~ ul {
+    transform: translate(-85%, -110%);
+  }
+
   section {
     height: 41rem;
   }
