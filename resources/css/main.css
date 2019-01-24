@@ -43,18 +43,6 @@ h4 {
 
 /* === Navigation === */
 
-/*
-nav {
-  position: fixed;
-  z-index: 1;
-
-  padding: 1rem 1rem 1rem .3rem;
-
-  background: #4C4DA6;
-  border-bottom: 1px solid #fff;
-  width: 100vw;
-} */
-
 nav {
   position: fixed;
   z-index: 1;
@@ -106,8 +94,8 @@ nav {
   margin-bottom: 5px;
 
   background: #3D5EB5;
-  height: 4px;
-  width: 33px;
+  height: .2rem;
+  width: 1.5rem;
   transition: all .5s ease-in-out;
   z-index: 1;
 }
@@ -115,7 +103,7 @@ nav {
 #menuToggle input:checked ~ .burger span
 {
   background: gray;
-  transform: translateY(-9px) rotate(-135deg);
+  transform: translateY(-8px) rotate(-135deg);
 }
 
 #menuToggle input:checked ~ .burger span:nth-last-child(2)
@@ -125,7 +113,7 @@ nav {
 
 #menuToggle input:checked ~ .burger span:nth-last-child(3)
 {
-  transform: translateY(9px) rotate(135deg);
+  transform: translateY(8px) rotate(135deg);
 }
 
 #menu {
@@ -178,7 +166,7 @@ nav {
 
   display: flex;
 
-  background: #3D5EB5;
+  background: #354D9E;
   background-image: url("../images/cartographer.png");
   color: #41E6FF;
 }
