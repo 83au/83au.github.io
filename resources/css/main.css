@@ -79,6 +79,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   display: flex;
   margin-top: -.4rem;
@@ -383,16 +384,25 @@ a .fa:focus {
 
   /* Tablet */
 @media only screen and (min-width: 530px) {
+  .burger {
+    left: 3rem;
+  }
+
+  #menuToggle input {
+    right: -3rem;
+  }
+
   #menu {
     justify-content: center;
   }
+
   #menu li {
     margin: 0 2rem 0 0;
     font-size: 1.3rem;
   }
 
   #menuToggle input:checked ~ ul {
-    transform: translate(-85%, -120%);
+    transform: translate(-83%, -120%);
   }
 
   section {
@@ -496,7 +506,7 @@ a .fa:focus {
   }
 
   #menuToggle input:checked ~ ul {
-    transform: translate(-85%, -110%);
+    transform: translate(-82%, -110%);
   }
 
   section {
