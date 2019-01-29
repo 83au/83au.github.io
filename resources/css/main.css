@@ -283,7 +283,7 @@ p {
 }
 
 .skills-tools .columns .col {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   width: 100%;
 }
 
@@ -546,7 +546,7 @@ a .fa:focus {
   .columns {
     flex-direction: row;
     position: relative;
-    top: 3rem;
+    top: 1rem;
 
     width: 100%;
   }
