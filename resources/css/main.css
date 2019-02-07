@@ -507,6 +507,10 @@ a .fa:focus {
     margin-top: -.3rem;
   }
 
+  #menuToggle {
+    margin-left: 91vw;
+  }
+
   #menu {
     justify-content: center;
     transform: translate(50%, -110%);
@@ -518,7 +522,7 @@ a .fa:focus {
   }
 
   #menuToggle input:checked ~ ul {
-    transform: translate(-82%, -110%);
+    transform: translate(-88%, -110%);
   }
 
   section {
