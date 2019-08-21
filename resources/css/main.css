@@ -171,6 +171,7 @@ nav {
 
   background: #354D9E;
   background-image: url("../images/cartographer.png");
+  background-attachment: fixed;
   color: #41E6FF;
 }
 
@@ -278,6 +279,7 @@ p {
   padding-top: 5rem;
 
   background: linear-gradient(#4C4DA6, #A82F3D);
+  background-attachment: fixed;
   color: white;
 }
 
