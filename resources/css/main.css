@@ -171,8 +171,14 @@ nav {
 
   background: #354D9E;
   background-image: url("../images/cartographer.png");
-  background-attachment: fixed;
+  background-attachment: local;
   color: #41E6FF;
+}
+
+@supports(background-attachment: fixed) {
+  .banner {
+    background-attachment: fixed;
+  }
 }
 
 .hero {
@@ -279,8 +285,14 @@ p {
   padding-top: 5rem;
 
   background: linear-gradient(#4C4DA6, #A82F3D);
-  background-attachment: fixed;
+  background-attachment: local;
   color: white;
+}
+
+@supports(background-attachment: fixed) {
+  .skills-tools {
+    background-attachment: fixed;
+  }
 }
 
 .skills-tools h3 {
