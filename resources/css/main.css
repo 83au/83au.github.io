@@ -172,6 +172,7 @@ header {
   /* background-image: url("../images/cartographer.png"); */
   color: #41E6FF;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .hero {
