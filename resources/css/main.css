@@ -161,32 +161,26 @@ nav {
 
 
 /* === Banner === */
-
-.banner {
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-
-  display: flex;
-
-  background: #354D9E;
-  background-image: url("../images/cartographer.png");
-  background-attachment: local;
-  color: #41E6FF;
+header {
+  position: relative;
+  top: 0;
 }
 
-@supports(background-attachment: fixed) {
-  .banner {
-    background-attachment: fixed;
-  }
+.banner {
+  height: 100vh;
+  background: #354D9E;
+  /* background-image: url("../images/cartographer.png"); */
+  color: #41E6FF;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .hero {
-  position: relative;
+  position: fixed;
   top: 13rem;
   width: 100%;
 
   text-align: center;
+  z-index: 1;
 }
 
 .hero h1 {
