@@ -183,7 +183,7 @@ header {
 
 .hero {
   position: fixed;
-  top: 13rem;
+  top: 10rem;
   width: 100%;
 
   text-align: center;
@@ -228,19 +228,19 @@ header {
 
 .hero-button:hover > button {
   transform: translate(-50%, -.5rem);
-  box-shadow: 0 .6rem 1.2rem rgba(0, 0, 0, .3);
+  box-shadow: 0 .6rem 1rem rgba(0, 0, 0, .5);
 }
 
 .hero-button button {
   position: absolute;
-  top: 80%;
+  top: 70%;
   left: 50%;
   transform: translateX(-50%);
 
   background: #ECEDFA;
   border: none;
   border-radius: 2.5rem;
-  box-shadow: 0 6px 3px rgba(0, 0, 0, .4);
+  box-shadow: 0 6px 3px rgba(0, 0, 0, .5);
   color: inherit;
   cursor: pointer;
   height: 3rem;
@@ -599,6 +599,10 @@ a .fa:focus {
 
   .banner p {
     font-size: 3rem;
+  }
+
+  .hero-button button {
+    top: 80%;
   }
 
   .about {
