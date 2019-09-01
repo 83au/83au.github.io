@@ -4,19 +4,25 @@
   padding: 0;
 }
 
-/* === Box Sizing === */
+
+/* === Universal Styles === */
+
+/* #54D69B */
+
+:root {
+  --color-primary: #354D9E;
+  --color-secondary: #ECEDFA;
+  --color-tertiary: #BF4154;
+  --color-main-heading: #41E6FF;
+  --color-text: #0D0D0D;
+}
 
 html {
   scroll-behavior: smooth;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
-}
 
-
-/* === Universal Styles === */
-
-html {
   min-height: 100%;
   min-width: 100%;
 
@@ -32,7 +38,7 @@ section {
 .about,
 .contact,
 footer {
-  background: #ECEDFA;
+  background: var(--color-secondary);
 }
 
 h2,
@@ -91,7 +97,7 @@ nav {
   display: flex;
   margin-top: -.4rem;
 
-  background: #ECEDFA;
+  background: var(--color-secondary);
   border-radius: 50%;
   height: 50px;
   width: 50px;
@@ -101,7 +107,7 @@ nav {
   display: block;
   margin-bottom: 5px;
 
-  background: #3D5EB5;
+  background: var(--color-primary);
   height: .2rem;
   width: 1.5rem;
   transition: all .5s ease-in-out;
@@ -132,7 +138,7 @@ nav {
   margin: 1rem;
   padding: 1.5rem 0 1.5rem 1.5rem;
 
-  background: #ECEDFA;
+  background: var(--color-secondary);
   list-style-type: none;
   transform-origin: 0% 0%;
   transform: translate(50%, -120%);
@@ -155,14 +161,14 @@ nav {
 }
 
 #menu a {
-  color: #3D5EB5;
+  color: var(--color-primary);
   text-decoration: none;
 }
 
 #menu a:hover,
 #menu a:active,
 #menu a:focus {
-  color: #FD465A;
+  color: var(--color-tertiary);
 }
 
 
@@ -174,9 +180,9 @@ header {
 
 .banner {
   height: 100vh;
-  background: #354D9E;
+  background: var(--color-primary);
   /* background-image: url("../images/cartographer.png"); */
-  color: #41E6FF;
+  color: var(--color-main-heading);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
@@ -196,7 +202,7 @@ header {
   animation-name: toright;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  border-bottom: 3px solid #41E6FF;
+  border-bottom: 3px solid var(--color-main-heading);
   width: 83%;
 
   font-family: 'Shadows Into Light', cursive;
@@ -205,7 +211,7 @@ header {
 
 .banner p {
   animation: toleft 1s forwards;
-  color: #41E6FF;
+  color: var(--color-main-heading);
 
   font-size: 1.5rem;
   font-style: italic;
@@ -217,12 +223,12 @@ header {
 }
 
 .hero-button:link {
-  color: #354D9E;
+  color: var(--color-primary);
   text-decoration: none;
 }
 
 .hero-button:visited {
-  color: #354D9E;
+  color: var(--color-primary);
   text-decoration: none;
 }
 
@@ -237,7 +243,7 @@ header {
   left: 50%;
   transform: translateX(-50%);
 
-  background: #ECEDFA;
+  background: var(--color-secondary);
   border: none;
   border-radius: 2.5rem;
   box-shadow: 0 6px 3px rgba(0, 0, 0, .5);
@@ -280,7 +286,7 @@ p {
   position: relative;
   bottom: 1.5rem;
 
-  color: #0D0D0D;
+  color: var(--color-text);
 
   font-size: 1.2rem;
   font-weight: 300;
@@ -289,26 +295,21 @@ p {
 }
 
 .about a {
-  color: #4C4DA6;
+  color: var(--color-primary);
   transition: color .4s;
 }
 
 .about a:visited {
-  color: #FD465A;
+  color: var(--color-tertiary);
 }
 
 .about a:hover {
-  color: #FD465A;
+  color: var(--color-tertiary);
 }
 
 .about a:active,
 .about a:focus {
   color: #C84DA6;
-}
-
-.mid div {
-  border-bottom-color: #59946F;
-  border-left-color: #59946F;
 }
 
 
@@ -322,7 +323,7 @@ p {
   display: flex;
   padding-top: 5rem;
 
-  background: linear-gradient(#4C4DA6, #A82F3D);
+  background: linear-gradient(var(--color-primary), var(--color-tertiary));
   background-attachment: local;
   color: white;
 }
@@ -378,7 +379,7 @@ p {
   bottom: 1rem;
   position: relative;
 
-  color: #4C4DA6;
+  color: var(--color-primary);
 
   font-size: 2.5rem;
   text-decoration: none;
@@ -403,13 +404,13 @@ a .fa {
 }
 
 a .fa:hover {
-  color: #FD465A;
+  color: var(--color-tertiary);
   transform: scale(1.5);
 }
 
 a .fa:active,
 a .fa:focus {
-  color: #FD465A;
+  color: var(--color-tertiary);
   transform: scale(1.5);
 }
 
