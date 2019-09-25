@@ -32,7 +32,8 @@ html {
 }
 
 section {
-  height: 100vh;
+  /* height: 100vh; */
+  padding: 4rem 0;
 }
 
 .about,
@@ -193,7 +194,6 @@ header {
   width: 100%;
 
   text-align: center;
-  z-index: 1;
 }
 
 .hero h1 {
@@ -243,14 +243,15 @@ header {
   left: 50%;
   transform: translateX(-50%);
 
+  animation: bounce .4s ease-out 2.5s 2 alternate;
   background: var(--color-secondary);
   border: none;
-  border-radius: 2.5rem;
+  border-radius: 50%;
   box-shadow: 0 6px 3px rgba(0, 0, 0, .5);
   color: inherit;
   cursor: pointer;
-  height: 3rem;
-  width: 9rem;
+  height: 2rem;
+  width: 2rem;
   outline: none;
   transition: .3s;
 
@@ -267,18 +268,17 @@ header {
   justify-content: center;
 
   display: flex;
-  padding: 1.5rem;
+  padding: 4rem 1.5rem;
 }
 
 .about h2 {
-  position: relative;
-  bottom: 5rem;
+  margin-bottom: 4rem;
 
   font-size: 3rem;
   text-decoration: none;
 }
 
-img {
+.avatar {
   display: none;
 }
 
@@ -363,6 +363,56 @@ p {
 }
 
 
+/* === Tools === */
+.tools {
+  padding: 3rem .5rem;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.tools h3 {
+  font-size: 3.5rem;
+}
+
+.tools p {
+  margin-top: 3rem;
+}
+
+.tools ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.tool {
+  margin: .5rem;
+  padding: 1rem;
+  width: 30%;
+}
+
+.tool h5 {
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+.wrapper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.wrapper img {
+  height: 100%;
+  width: 100%;
+}
+
+/* .tools li:not(:last-child) {
+  margin-bottom: 1rem;
+} */
+
+
 /* === Contact === */
 
 .contact {
@@ -396,20 +446,20 @@ p {
   width: 3rem;
 }
 
-a .fa {
+.contact .fa {
   margin: 2rem 0;
 
   color: #4C4DA6;
   transition: all .4s;
 }
 
-a .fa:hover {
+.contact .fa:hover {
   color: var(--color-tertiary);
   transform: scale(1.5);
 }
 
-a .fa:active,
-a .fa:focus {
+.contact .fa:active,
+.contact .fa:focus {
   color: var(--color-tertiary);
   transform: scale(1.5);
 }
@@ -429,6 +479,12 @@ a .fa:focus {
 }
 
 
+/* === Footer === */
+footer {
+  text-align: center;
+}
+
+
 /* === Key Frames === */
 
 @keyframes toright {
@@ -439,6 +495,15 @@ a .fa:focus {
 @keyframes toleft {
   from {transform: translateX(1000px)}
   to {transform: translateX(0px)}
+}
+
+@keyframes bounce {
+  0, 100% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translate(-50%, -1rem);
+  }
 }
 
 
@@ -467,10 +532,6 @@ a .fa:focus {
     transform: translate(-83%, -120%);
   }
 
-  section {
-    height: 55rem;
-  }
-
   .hero h1 {
     width: 70%;
     font-size: 4rem;
@@ -481,11 +542,11 @@ a .fa:focus {
   }
 
   .about {
-    padding: 1rem;
+    padding: 4rem 1rem;
   }
 
   .about h2 {
-    margin: 1rem auto 2rem auto;
+    margin: 1rem auto 4rem auto;
 
     font-size: 4.5rem;
     text-align: center;
@@ -501,11 +562,12 @@ a .fa:focus {
     color: #5AFFCC;
   }
 
-  img {
+  .avatar {
     float: left;
 
     display: inline-block;
     margin-right: 4rem;
+    margin-bottom: 2rem;
     shape-outside: circle();
 
     border-radius: 50%;
@@ -541,8 +603,21 @@ a .fa:focus {
     line-height: 2;
   }
 
+  .tools {
+    padding: 4rem 1rem;
+  }
+
+  .tools p {
+    font-size: 1.4rem;
+  }
+
+  .tool {
+    width: calc(100% / 3 - 5rem);
+  }
+
   .contact h3 {
-    bottom: 4rem;
+    bottom: 0;
+    margin: 4rem;
     font-size: 4.5rem;
   }
 
@@ -550,16 +625,16 @@ a .fa:focus {
     width: 7rem;
   }
 
-  a .fa {
+  .contact .fa {
     margin: 2.5rem 0;
     transform: scale(1.4);
   }
 
-  a .fa:hover {
+  .contact .fa:hover {
     transform: scale(2);
   }
 
-  a .fa:active {
+  .contact .fa:active {
     transform: scale(2);
   }
 }
@@ -589,10 +664,6 @@ a .fa:focus {
     transform: translate(-88%, -110%);
   }
 
-  section {
-    height: 41rem;
-  }
-
   .hero h1 {
     width: 65%;
     font-size: 6rem;
@@ -603,11 +674,11 @@ a .fa:focus {
   }
 
   .hero-button button {
-    top: 80%;
+    top: 70%;
   }
 
   .about {
-    padding: 1.5rem;
+    padding: 4rem 1.5rem;
   }
 
   .about h2 {
@@ -649,6 +720,18 @@ a .fa:focus {
     line-height: 2.5;
   }
 
+  .tools p {
+    font-size: 1.4rem;
+  }
+
+  .tools ul {
+    margin: 4rem 0;
+  }
+
+  .tool {
+    width: calc(100% / 6 - 5rem);
+  }
+
   .contact {
     padding: 2rem;
   }
@@ -671,16 +754,16 @@ a .fa:focus {
     width: 7rem;
   }
 
-  a .fa {
+  .contact .fa {
     margin: 4rem 0;
     transform: scale(1.5);
   }
 
-  a .fa:hover {
+  .contact .fa:hover {
     transform: scale(2);
   }
 
-  a .fa:active {
+  .contact .fa:active {
     transform: scale(2);
   }
 }

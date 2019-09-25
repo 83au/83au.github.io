@@ -7,17 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Website for front end developer and web
     designer Beau Sherman.">
+
     <!-- Icons -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     type="text/css" rel="stylesheet">
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400|Shadows+Into+Light"
     rel="stylesheet">
+
     <!-- Stylesheets -->
       <!-- Browser styles reset -->
     <link href="./resources/css/reset.css" type="text/css" rel="stylesheet">
       <!-- Custom styles -->
     <link href="./resources/css/main.css" type="text/css" rel="stylesheet">
+
     <!-- Scripts -->
     <script defer src="particles.min.js"></script>
     <script defer src="app.js"></script>
@@ -51,11 +55,11 @@
           <p>Front End Developer</p>
           <!-- <p class="notice">Outdated: new updated site coming soon!</p> -->
         </div>
-      </section>
 
-      <a href="#about" class="hero-button">
-        <button >about me</button>
-      </a>
+        <a href="#about" class="hero-button">
+          <button><i class="fa fa-chevron-down"></i></button>
+        </a>
+      </section>
     </header>
 
     <main>
@@ -64,7 +68,7 @@
       <section class="about" id="about">
         <h2> About Me</h2>
         <div class="content">
-          <img src="./resources/images/my-avatar.png" alt="Beau Sherman" height="250px">
+          <img class="avatar" src="./resources/images/my-avatar.png" alt="Beau Sherman" height="250px">
           <p>Hi, I'm Beau. I'm a Front End Developer living in Southern
             California. I love making responsive and accessible websites that
             users enjoy visiting. I gain new skills in web development everyday.
@@ -93,7 +97,7 @@
               <li>jQuery</li>
             </ul>
           </div>
-          <div class="col tools">
+          <div class="col">
             <h4>Design</h4>
             <ul>
               <li>Accessibility</li>
@@ -105,9 +109,50 @@
         </div>
       </section>
 
-      <!-- TODO:
-      TOOLS
-    -->
+      <!-- Tools -->
+
+      <section class="tools">
+        <h3>Tools</h3>
+        <p>These are some of the tools I use regularly to design and build websites.</p>
+        <ul>
+          <li class="tool">
+            <div class="wrapper">
+              <img src="resources/images/tools/atom.svg" alt="Atom logo.">
+            </div>
+            <h5>Atom</h5>
+          </li>
+          <li class="tool">
+            <div class="wrapper">
+              <img src="resources/images/tools/Balsamiq.svg" alt="Atom logo.">
+            </div>
+            <h5>Balsamiq</h5>
+          </li>
+          <li class="tool">
+            <div class="wrapper">
+              <img src="resources/images/tools/Github.svg" alt="Atom logo.">
+            </div>
+            <h5>Github</h5>
+          </li>
+          <li class="tool">
+            <div class="wrapper">
+              <img src="resources/images/tools/illustrator.svg" alt="Atom logo.">
+            </div>
+            <h5>Illustrator</h5>
+          </li>
+          <li class="tool">
+            <div class="wrapper">
+              <img src="resources/images/tools/photoshop.svg" alt="Atom logo.">
+            </div>
+            <h5>Photoshop</h5>
+          </li>
+          <li class="tool">
+            <div class="wrapper">
+              <img src="resources/images/tools/VisualStudioCode.svg" alt="Atom logo.">
+            </div>
+            <h5>Visual Studio Code</h5>
+          </li>
+        </ul>
+      </section>
 
       <!-- Contact -->
 
@@ -116,12 +161,16 @@
         <div class="icons">
           <a href="https://www.linkedin.com/in/beau-sherman-504763163/"><i class="fa fa-linkedin fa-3x"></i></a>
           <a href="https://github.com/83au"><i class="fa fa-github fa-3x"></i></a>
+          <a href="https://codepen.io/83au"><i class="fa fa-codepen fa-3x"></i></a>
           <a href="mailto:brsherman88@gmail.com"><i class="fa fa-envelope fa-3x"></i></a>
         </div>
       </section>
 
     </main>
 
+    <footer>&copy; Beau Sherman&nbsp;</footer>
+
+    <script src="script.js"></script>
   </body>
 
 </html>
