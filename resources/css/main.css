@@ -149,6 +149,21 @@ nav {
   -webkit-font-smoothing: antialiased;
 }
 
+/* NEW ANIMATION ?
+#menu::after {
+  position: absolute;
+  top: 2.8rem;
+  left: 6.8rem;
+
+  content: '';
+  display: block;
+  width: 3.5rem;
+  height: 2px;
+  background: blue;
+}
+ */
+
+
 #menu li {
   display: inline-block;
   margin: 0 .5rem 0 .5rem;
@@ -200,7 +215,8 @@ header {
   margin: 2rem auto;
 
   animation-name: toright;
-  animation-duration: 1s;
+  animation-duration: 1.1s;
+  animation-timing-function: cubic-bezier(.89,.14,.77,1.34);
   animation-fill-mode: forwards;
   border-bottom: 3px solid var(--color-main-heading);
   width: 83%;
@@ -210,7 +226,7 @@ header {
 }
 
 .banner p {
-  animation: toleft 1s forwards;
+  animation: toleft 1s .2s cubic-bezier(.89,.14,.77,1.34) backwards;
   color: var(--color-main-heading);
 
   font-size: 1.5rem;
@@ -253,7 +269,7 @@ header {
   height: 2rem;
   width: 2rem;
   outline: none;
-  transition: .3s;
+  transition: 8s ease-out;
 
   font-size: 1rem;
   letter-spacing: 1px;
@@ -488,12 +504,12 @@ footer {
 /* === Key Frames === */
 
 @keyframes toright {
-  from {transform: translateX(-1000px)}
+  from {transform: translateX(-2000px)}
   to {transform: translateX(0px)}
 }
 
 @keyframes toleft {
-  from {transform: translateX(1000px)}
+  from {transform: translateX(2000px)}
   to {transform: translateX(0px)}
 }
 
