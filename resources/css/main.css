@@ -216,7 +216,7 @@ header {
 
   animation-name: toright;
   animation-duration: 1.1s;
-  animation-timing-function: cubic-bezier(.89,.14,.77,1.34);
+  animation-timing-function: cubic-bezier(.62,.45,.75,1.38);
   animation-fill-mode: forwards;
   border-bottom: 3px solid var(--color-main-heading);
   width: 83%;
@@ -226,7 +226,7 @@ header {
 }
 
 .banner p {
-  animation: toleft 1s .2s cubic-bezier(.89,.14,.77,1.34) backwards;
+  animation: toleft 1s .2s cubic-bezier(.62,.45,.75,1.38) backwards;
   color: var(--color-main-heading);
 
   font-size: 1.5rem;
