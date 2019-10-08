@@ -1,8 +1,7 @@
 $(function() {
-  var date = new Date();
-  var currentYear = date.getFullYear();
-  $('footer').append(currentYear);
+  // Set copyright date
+  $('footer').append((new Date()).getFullYear());
 
   // Smooth scroll for safari and ios browsers
-  $('.gallery-main__nav--link').smoothScroll();
+  $('[href]').smoothScroll();
 });

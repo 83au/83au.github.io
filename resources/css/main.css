@@ -259,8 +259,6 @@ header {
   left: 50%;
   transform: translateX(-50%);
 
-  animation: bounce .4s ease-out 2.5s 2 alternate;
-  -webkit-animation: bounce .4s ease-out 2.5s 2 alternate;
   background: var(--color-secondary);
   border: none;
   border-radius: 50%;
@@ -270,6 +268,9 @@ header {
   height: 2rem;
   width: 2rem;
   outline: none;
+
+  animation: bounce .4s ease-out 2.5s 2 alternate;
+  -webkit-animation: bounce .4s ease-out 2.5s 2 alternate;
   transition: 8s ease-out;
 
   font-size: 1rem;
