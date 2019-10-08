@@ -36,6 +36,29 @@ section {
   padding: 4rem 0;
 }
 
+.section-para {
+  margin: 3rem 0;
+  line-height: 1.7;
+}
+
+.link {
+  color: var(--color-primary);
+  transition: color .4s;
+}
+
+.link:visited {
+  color: var(--color-tertiary);
+}
+
+.link:hover {
+  color: var(--color-tertiary);
+}
+
+.link:active,
+.link:focus {
+  color: #C84DA6;
+}
+
 .about,
 .contact,
 footer {
@@ -300,7 +323,7 @@ header {
   display: none;
 }
 
-p {
+.about__para {
   position: relative;
   bottom: 1.5rem;
 
@@ -312,26 +335,11 @@ p {
   letter-spacing: .08rem;
 }
 
-.about a {
-  color: var(--color-primary);
-  transition: color .4s;
-}
-
-.about a:visited {
-  color: var(--color-tertiary);
-}
-
-.about a:hover {
-  color: var(--color-tertiary);
-}
-
-.about a:active,
-.about a:focus {
-  color: #C84DA6;
-}
-
 
 /* === Projects === */
+.projects {
+  text-align: center;
+}
 
 .projects h3 {
   margin: 3rem 0;
@@ -471,10 +479,6 @@ p {
   font-size: 3.5rem;
 }
 
-.tools p {
-  margin-top: 3rem;
-}
-
 .tools ul {
   display: flex;
   flex-wrap: wrap;
@@ -608,6 +612,10 @@ footer {
 
   /* Tablet */
 @media only screen and (min-width: 530px) {
+  .section-para {
+    font-size: 1.4rem;
+  }
+
   .burger {
     left: 3rem;
   }
@@ -649,7 +657,7 @@ footer {
     text-align: center;
   }
 
-  p {
+  .about__para {
     font-size: 1.4rem;
     line-height: 1.4;
   }
@@ -668,10 +676,6 @@ footer {
     shape-outside: circle();
 
     border-radius: 50%;
-  }
-
-  p {
-    font-size: 2rem;
   }
 
   .skills-tools h3 {
@@ -702,10 +706,6 @@ footer {
 
   .tools {
     padding: 4rem 1rem;
-  }
-
-  .tools p {
-    font-size: 1.4rem;
   }
 
   .tool {
@@ -739,6 +739,10 @@ footer {
 
   /* Desktop */
 @media only screen and (min-width: 900px) and (orientation: landscape) {
+  .section-para {
+    font-size: 1.4rem;
+  }
+
   .burger {
     margin-top: -.3rem;
   }
@@ -783,7 +787,7 @@ footer {
     bottom: 1rem;
   }
 
-  p {
+  .about__para {
     font-size: 2rem;
   }
 
@@ -876,10 +880,6 @@ footer {
     font-weight: 300;
     font-size: 1.5rem;
     line-height: 2.5;
-  }
-
-  .tools p {
-    font-size: 1.4rem;
   }
 
   .tools ul {
