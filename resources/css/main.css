@@ -110,7 +110,7 @@ nav {
 #menuToggle {
   position: flex;
 
-  margin-left: 85vw;
+  margin-left: 86vw;
   margin-top: 1rem;
 
   user-select: none;
@@ -180,8 +180,8 @@ nav {
   position: absolute;
 
   display: flex;
-  justify-content: center;
-  margin: 1rem;
+  justify-content: left;
+  margin: 1rem 1rem 1rem 2rem;
   padding: 1.5rem 0 1.5rem 1.5rem;
 
   background: var(--color-secondary);
@@ -211,7 +211,7 @@ nav {
 
 #menu li {
   display: inline-block;
-  margin: 0 .5rem 0 .5rem;
+  margin: 0 .4rem;
 
   font-size: 1rem;
   font-weight: 400;
