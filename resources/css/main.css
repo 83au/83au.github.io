@@ -5,6 +5,28 @@
 }
 
 
+/* === Key Frames === */
+
+@keyframes toright {
+  from { transform: translateX(-2000px); }
+  to { transform: translateX(0px); }
+}
+
+@keyframes toleft {
+  from { transform: translateX(2000px); }
+  to { transform: translateX(0px); }
+}
+
+@keyframes bounce {
+  0, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+
 /* === Universal Styles === */
 
 /* #54D69B */
@@ -262,8 +284,14 @@ header {
 }
 
 .hero-button:link {
+  display: inline-block;
+  margin-top: 10rem;
   color: var(--color-primary);
+
+  animation: bounce .4s 2.5s 2 alternate;
+  -webkit-animation: bounce .4s 2.5s 2 alternate;
   text-decoration: none;
+  transition: transform 100ms ease-out;
 }
 
 .hero-button:visited {
@@ -271,17 +299,15 @@ header {
   text-decoration: none;
 }
 
+.hero-button:hover {
+  transform: translateY(-7px) scale(1.02);
+}
+
 .hero-button:hover > button {
-  transform: translate(-50%, -.5rem);
-  box-shadow: 0 .6rem 1rem rgba(0, 0, 0, .5);
+  box-shadow: 0 6px 3px rgba(0, 0, 0, .4);
 }
 
 .hero-button button {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translateX(-50%);
-
   background: var(--color-secondary);
   border: none;
   border-radius: 50%;
@@ -291,10 +317,6 @@ header {
   height: 2rem;
   width: 2rem;
   outline: none;
-
-  animation: bounce .4s ease-out 2.5s 2 alternate;
-  -webkit-animation: bounce .4s ease-out 2.5s 2 alternate;
-  transition: 8s ease-out;
 
   font-size: 1rem;
   letter-spacing: 1px;
@@ -583,28 +605,6 @@ header {
 /* === Footer === */
 footer {
   text-align: center;
-}
-
-
-/* === Key Frames === */
-
-@keyframes toright {
-  from {transform: translateX(-2000px)}
-  to {transform: translateX(0px)}
-}
-
-@keyframes toleft {
-  from {transform: translateX(2000px)}
-  to {transform: translateX(0px)}
-}
-
-@keyframes bounce {
-  0, 100% {
-    transform: translateX(-50%);
-  }
-  50% {
-    transform: translate(-50%, -1.5rem);
-  }
 }
 
 
