@@ -18,12 +18,8 @@
 }
 
 @keyframes bounce {
-  0, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+  0, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
 }
 
 
@@ -288,8 +284,8 @@ header {
   margin-top: 10rem;
   color: var(--color-primary);
 
-  animation: bounce .4s 2.5s 2 alternate;
-  -webkit-animation: bounce .4s 2.5s 2 alternate;
+  animation: bounce .6s 2.5s 2;
+  -webkit-animation: bounce .6s 2.5s 2;
   text-decoration: none;
   transition: transform 100ms ease-out;
 }
