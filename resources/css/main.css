@@ -57,6 +57,7 @@ section {
 .section-para {
   margin: 3rem 0;
   line-height: 1.7;
+  font-weight: normal;
 }
 
 .link {
@@ -348,7 +349,7 @@ header {
   color: var(--color-text);
 
   font-size: 1.2rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6;
   letter-spacing: .08rem;
 }
@@ -610,6 +611,7 @@ footer {
 @media only screen and (min-width: 530px) {
   .section-para {
     font-size: 1.4rem;
+    font-weight: 300;
   }
 
   .burger {
@@ -655,6 +657,7 @@ footer {
 
   .about__para {
     font-size: 1.4rem;
+    font-weight: 300;
     line-height: 1.4;
   }
 
