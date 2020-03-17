@@ -44,7 +44,6 @@ html {
   min-height: 100%;
   min-width: 100%;
 
-  font-size: 16px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
 }
@@ -349,7 +348,7 @@ header {
 
   color: var(--color-text);
 
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.6;
   letter-spacing: .08rem;
@@ -660,6 +659,7 @@ footer {
 
   .about__para {
     font-size: 1.4rem;
+    font-weight: 300;
     line-height: 1.4;
   }
 
@@ -671,7 +671,7 @@ footer {
   .avatar {
     float: left;
     
-    display: inline-block;
+    display: block;
     margin-right: 4rem;
     margin-bottom: 2rem;
     shape-outside: circle();
@@ -697,6 +697,7 @@ footer {
 
   .columns .col h4 {
     font-size: 2rem;
+    font-weight: 300;
   }
 
   .columns .col ul li {
