@@ -237,6 +237,7 @@ header {
 }
 
 .banner {
+  padding: 0;
   height: 100vh;
   background: var(--color-primary);
   /* background-image: url("../images/cartographer.png"); */
@@ -328,7 +329,7 @@ header {
   justify-content: center;
 
   display: flex;
-  padding: 4rem 1.5rem;
+  padding: 4rem 1rem;
 }
 
 .about h2 {
@@ -348,8 +349,8 @@ header {
 
   color: var(--color-text);
 
-  font-size: 1.2rem;
-  font-weight: 300;
+  font-size: 1.3rem;
+  font-weight: 400;
   line-height: 1.6;
   letter-spacing: .08rem;
 }
