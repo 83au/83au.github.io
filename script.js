@@ -1,4 +1,4 @@
-$(function() {
+const main = () => {
   // Set copyright date
   $('footer').append(new Date().getFullYear());
 
@@ -90,4 +90,7 @@ $(function() {
   }
 
   makeProjectsSection();
-});
+};
+
+
+$(main);
