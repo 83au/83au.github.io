@@ -1,0 +1,24 @@
+{
+  "name": "beaushermanportfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for Beau Sherman",
+  "main": "script.js",
+  "scripts": {
+    "build": "babel src -d lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/83au/83au.github.io.git"
+  },
+  "author": "Beau Sherman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/83au/83au.github.io/issues"
+  },
+  "homepage": "https://github.com/83au/83au.github.io#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0"
+  }
+}
