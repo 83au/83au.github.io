@@ -1,4 +1,4 @@
-const main = () => {
+$(function() {
   // Set copyright date
   $('footer').append(new Date().getFullYear());
 
@@ -6,7 +6,7 @@ const main = () => {
   $('[href^="#"]').smoothScroll();
 
 
-  const $projects = [
+  const projects = [
     {
       image: 'resources/images/projects/virtual-tours.png',
       title: 'Nicole\'s 3D Virtual Tours',
@@ -58,18 +58,18 @@ const main = () => {
   ];
 
 
-  function createCard($project) {
+  function createCard(project) {
     return `
       <div class="projects__card">
           <div class="projects__card-side projects__card-side--front">
             <div class="projects__image-container">
-              <img src="${$project.image}" alt="${$project.title}">
+              <img src="${project.image}" alt="${project.title}">
             </div>
-            <h4 class="project-title">${$project.title}</h4>
+            <h4 class="project-title">${project.title}</h4>
           </div>
           <div class="projects__card-side projects__card-side--back">
-            <p class="projects__project-summary">${$project.summary}</p>
-            <a class="projects__more-info" href="${$project.link}">
+            <p class="projects__project-summary">${project.summary}</p>
+            <a class="projects__more-info" href="${project.link}">
               <button class="projects__button" aria-label="More information">More info!</button>
             </a>
           </div>
@@ -79,18 +79,13 @@ const main = () => {
 
 
   function makeProjectsSection() {
-    const $container = document.createElement('div');
+    const $container = $('<div></div>');
     $container.className = 'projects__container';
 
-    $projects.forEach($project => {
-      $container.insertAdjacentHTML('beforeend', createCard($project));
-    });
-    
+    projects.forEach(project => $container.append(createCard(project)));
+
     $('#projects').append($container);
   }
 
   makeProjectsSection();
-};
-
-
-$(main);
+});

@@ -1,5 +1,7 @@
 /* === Reset === */
-*, *::before, *::after {
+*, 
+*::before, 
+*::after {
   margin: 0;
   padding: 0;
 }
@@ -48,10 +50,7 @@ html {
   font-weight: 200;
 }
 
-section {
-  /* height: 100vh; */
-  padding: 4rem 0;
-}
+section { padding: 4rem 0; }
 
 .section-para {
   margin: 3rem .5rem;
@@ -64,13 +63,9 @@ section {
   transition: color .4s;
 }
 
-.link:visited {
-  color: var(--color-tertiary);
-}
+.link:visited { color: var(--color-tertiary); }
 
-.link:hover {
-  color: var(--color-tertiary);
-}
+.link:hover { color: var(--color-tertiary); }
 
 .link:active,
 .link:focus {
