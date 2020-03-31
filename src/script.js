@@ -80,7 +80,7 @@ $(function() {
 
   function makeProjectsSection() {
     const $container = $('<div></div>');
-    $container.className = 'projects__container';
+    $container.addClass('projects__container');
 
     projects.forEach(project => $container.append(createCard(project)));
 
