@@ -8,6 +8,12 @@ $(function() {
 
   const projects = [
     {
+      image: 'resources/images/projects/tcg.jpg',
+      title: 'Tricking Combo Generator',
+      summary: 'A combo generator for the sport of tricking. Tricking consists of combinations of "tricks" inspired by martial arts, gymnastics, and break dancing.',
+      link: 'https://github.com/83au/TrickingComboGenerator'
+    },
+    {
       image: 'resources/images/projects/virtual-tours.png',
       title: 'Nicole\'s 3D Virtual Tours',
       summary: 'Website for Nicole\'s 3D Virtual Tours.Users can immerse themselves in a 3D walk- through experience of properties without ever leaving their home.',
