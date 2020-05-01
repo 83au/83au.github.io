@@ -316,7 +316,7 @@ header {
   justify-content: center;
 
   display: flex;
-  padding: 4rem 1rem;
+  padding: 5rem 1rem;
 }
 
 .about h2 {
@@ -475,7 +475,7 @@ header {
 
 /* === Tools === */
 .tools {
-  padding: 3rem .5rem;
+  padding: 5rem .5rem;
   color: var(--color-text);
   text-align: center;
 }

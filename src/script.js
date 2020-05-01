@@ -5,6 +5,7 @@ $(function() {
   // Smooth scroll for safari and ios browsers
   $('[href^="#"]').smoothScroll();
 
+  // Burger nav functionality
   $('.navbar__burger').click(() => $('.navbar__burger').toggleClass('active'));
   $('.navbar a').click(() => $('.navbar__burger').removeClass('active'));
 
@@ -90,11 +91,8 @@ $(function() {
   function makeProjectsSection() {
     const $container = $('<div></div>');
     $container.addClass('projects__container');
-
     projects.forEach(project => $container.append(createCard(project)));
-
     $('#projects').append($container);
   }
-
   makeProjectsSection();
 });
