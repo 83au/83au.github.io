@@ -30,11 +30,14 @@
 /* #54D69B */
 
 :root {
+  /* COLORS */
   --color-primary: #354D9E;
   --color-secondary: #ECEDFA;
   --color-tertiary: #BF4154;
   --color-main-heading: #41E6FF;
   --color-text: #0D0D0D;
+
+  /* OTHER */
   --shadow: 0 6px 6px rgba(0, 0, 0, .5);
 }
 
