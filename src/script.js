@@ -5,6 +5,9 @@ $(function() {
   // Smooth scroll for safari and ios browsers
   $('[href^="#"]').smoothScroll();
 
+  $('.navbar__burger').click(() => $('.navbar__burger').toggleClass('active'));
+  $('.navbar a').click(() => $('.navbar__burger').removeClass('active'));
+
 
   const projects = [
     {
