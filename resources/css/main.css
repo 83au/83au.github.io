@@ -347,7 +347,7 @@ header {
 }
 
 .projects h3 {
-  margin: 3rem 0;
+  margin-bottom: 3rem;
   text-align: center;
 }
 
@@ -677,7 +677,7 @@ footer {
   }
 
   .about h2 {
-    margin: 1rem auto 4rem auto;
+    margin: 0 auto 4rem auto;
     text-align: center;
   }
 
@@ -701,6 +701,10 @@ footer {
     shape-outside: circle();
 
     border-radius: 50%;
+  }
+
+  .projects h3 {
+    margin: 3rem 0;
   }
 
   .projects__container {
@@ -840,7 +844,7 @@ footer {
   }
 
   .about h2 {
-    margin: 2rem auto 4rem auto;
+    margin: 0 auto 4rem auto;
     bottom: 1rem;
   }
 
