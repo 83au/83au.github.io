@@ -395,7 +395,17 @@ header {
   font-weight: 400;
   letter-spacing: .5px;
   line-height: 1.7;
-  margin-bottom: 3rem;
+}
+
+.technologies-heading {
+  margin-top: 2rem;
+  font-size: 1.3;
+  font-weight: bold;
+}
+
+.technologies {
+  margin: 1rem 0 3rem 0;
+  line-height: 1.7;
 }
 
 .projects__button {
@@ -448,25 +458,14 @@ header {
   margin-bottom: 1rem;
 }
 
-.columns {
-  flex-direction: column;
+.skills-list {
   display: flex;
-}
-
-.skills-tools .columns .col {
+  flex-direction: column;
   margin-bottom: 1rem;
   width: 100%;
 }
 
-.columns .col h4 {
-  margin: 1rem auto;
-  padding-bottom: .5rem;
-
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-
-.columns .col ul li {
+.skills-list li {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.9;
@@ -720,23 +719,12 @@ footer {
     margin: 1rem 0 2rem 0;
   }
 
-  .columns {
-    flex-direction: column;
+  .skills-list {
     justify-content: space-around;
-
-    width: 100%;
-  }
-
-  .skills-tools .columns .col {
     margin-bottom: 3rem;
   }
 
-  .columns .col h4 {
-    font-size: 2rem;
-    font-weight: 300;
-  }
-
-  .columns .col ul li {
+  .skills-list li {
     font-size: 1.3rem;
     font-weight: 300;
     line-height: 2;
@@ -863,14 +851,13 @@ footer {
   .projects__card {
     position: relative;
     margin: 2rem;
-    padding: 4rem 1rem;
 
     border-radius: 0;
     box-shadow: none;
     -webkit-perspective: 40rem;
     perspective: 40rem;
     -moz-perspective: 40rem;
-    height: 12rem;
+    height: 20rem;
     width: 25%;
   }
 
@@ -878,8 +865,8 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 6px;
@@ -889,23 +876,49 @@ footer {
   }
 
   .projects__card-side--back {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2rem;
-
+    padding: 1rem;
     background: linear-gradient(var(--color-primary), var(--color-tertiary));
     transform: rotateY(180deg);
   }
 
+  .project-details {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    bottom: 5.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 1rem;
+  }
+
   .projects__project-summary {
+    font-size: .8rem;
     color: #fff;
-    margin-bottom: 1rem;
+  }
+
+  .technologies-heading {
+    margin-top: 1rem;
+  }
+
+  .technologies-heading,
+  .technologies {
+    color: #fff;
+  }
+
+  .technologies {
+    margin: .5rem;
+    font-size: .8rem;
   }
 
   .projects__button {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
     background: var(--color-secondary);
     color: var(--color-primary);
+    width: 12rem;
   }
 
   .projects__card:hover .projects__card-side--back {
