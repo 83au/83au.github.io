@@ -20,8 +20,13 @@
 }
 
 @keyframes bounce {
-  0, 100% { transform: translateY(0); }
+  0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-20px); }
+}
+
+@keyframes gradient {
+  0%, 100% { background-position: 50% 0%; }
+  50% { background-position: 50% 100%; }
 }
 
 
@@ -238,15 +243,14 @@ header {
 .hero h1 {
   margin: auto;
 
-  background-image: linear-gradient(var(--color-main-heading), hsl(200, 100%, 40%));
+  background-image: linear-gradient(#41f6FF, var(--color-primary));
+  background-size: 150% 150%;
   -webkit-background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 
-  animation-name: toright;
-  animation-duration: 1.1s;
-  animation-timing-function: cubic-bezier(.62,.45,.75,1.38);
-  animation-fill-mode: forwards;
+  animation: gradient 3s infinite;
+  -webkit-animation: gradient 5s infinite;
   width: 83%;
 
   font-family: sans-serif;
@@ -255,8 +259,14 @@ header {
 }
 
 .banner p {
-  animation: toleft 1s .2s cubic-bezier(.62,.45,.75,1.38) backwards;
-  color: var(--color-main-heading);
+  background-image: linear-gradient(#41f6FF, var(--color-primary));
+  background-size: 150% 150%;
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  animation: gradient 3s infinite;
+  -webkit-animation: gradient 5s infinite;
 
   font-size: 1.3rem;
   font-style: italic;
@@ -293,7 +303,7 @@ header {
 }
 
 .hero-button button {
-  background: var(--color-secondary);
+  background-color: #41f6FF;
   border: none;
   border-radius: 50%;
   box-shadow: 0 6px 3px rgba(0, 0, 0, .5);
@@ -303,7 +313,7 @@ header {
   width: 2rem;
   outline: none;
 
-  font-size: 1rem;
+  font-size: 1.3rem;
   letter-spacing: 1px;
 }
 
