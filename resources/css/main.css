@@ -243,8 +243,8 @@ header {
 .hero h1 {
   margin: auto;
 
-  background-image: linear-gradient(#41f6FF, hsl(220, 60%, 50%));
-  background-size: 150% 150%;
+  background-image: linear-gradient(#5AFFCC, #41f6FF, hsl(220, 60%, 50%));
+  background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -259,7 +259,7 @@ header {
 }
 
 .banner p {
-  background-image: linear-gradient(#41f6FF, hsl(220, 60%, 50%));
+  background-image: linear-gradient(#5AFFCC, #41f6FF, hsl(220, 60%, 50%));
   background-size: 150% 150%;
   -webkit-background-clip: text;
   -webkit-background-clip: text;
@@ -271,11 +271,6 @@ header {
   font-size: 1.3rem;
   font-style: italic;
   font-weight: lighter;
-}
-
-.banner .notice {
-  font-size: .8rem;
-  color: #5AFFCC;
 }
 
 .hero-button:link {
