@@ -25,8 +25,8 @@
 }
 
 @keyframes gradient {
-  0%, 100% { background-position: 50% 0%; }
-  50% { background-position: 50% 100%; }
+  0%, 100% { background-position: 50% 100%; }
+  50% { background-position: 50% 0%; }
 }
 
 
@@ -249,8 +249,8 @@ header {
   -webkit-background-clip: text;
   color: transparent;
 
-  animation: gradient 3s infinite;
-  -webkit-animation: gradient 5s infinite;
+  animation: gradient 7s infinite;
+  -webkit-animation: gradient 7s infinite;
   width: 83%;
 
   font-family: sans-serif;
@@ -265,8 +265,8 @@ header {
   -webkit-background-clip: text;
   color: transparent;
 
-  animation: gradient 3s infinite;
-  -webkit-animation: gradient 5s infinite;
+  animation: gradient 7s infinite;
+  -webkit-animation: gradient 7s infinite;
 
   font-size: 1.3rem;
   font-style: italic;
@@ -276,7 +276,7 @@ header {
 .hero-button:link {
   display: inline-block;
   margin-top: 10rem;
-  color: var(--color-primary);
+  color: hsl(220, 30%, 10%);
 
   animation: bounce .6s 2.5s 2;
   -webkit-animation: bounce .6s 2.5s 2;
