@@ -25,8 +25,8 @@
 }
 
 @keyframes gradient {
-  0%, 100% { background-position: 50% 100%; }
-  50% { background-position: 50% 0%; }
+  from { background-position: 50% 0%; }
+  to { background-position: 50% 100%; }
 }
 
 
@@ -249,8 +249,8 @@ header {
   -webkit-background-clip: text;
   color: transparent;
 
-  animation: gradient 7s infinite;
-  -webkit-animation: gradient 7s infinite;
+  animation: gradient 5s infinite alternate;
+  -webkit-animation: gradient 5s infinite alternate;
   width: 83%;
 
   font-family: sans-serif;
@@ -265,8 +265,8 @@ header {
   -webkit-background-clip: text;
   color: transparent;
 
-  animation: gradient 7s infinite;
-  -webkit-animation: gradient 7s infinite;
+  animation: gradient 5s infinite alternate;
+  -webkit-animation: gradient 5s infinite alternate;
 
   font-size: 1.3rem;
   font-style: italic;
