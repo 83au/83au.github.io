@@ -1,4 +1,6 @@
 $(function() {
+  $('.loader').hide();
+
   // Set copyright date
   $('footer').append(new Date().getFullYear());
 

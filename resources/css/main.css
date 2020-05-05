@@ -63,6 +63,16 @@ html {
 
 section { padding: 5rem 0; }
 
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-dark);
+  z-index: 1000;
+}
+
 .section-para {
   margin: 3rem .5rem;
   line-height: 1.7;
