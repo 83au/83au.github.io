@@ -1,5 +1,5 @@
 $(function() {
-  $('.loader').hide();
+  setTimeout(() => $('.loader').hide(), 500);
 
   // Set copyright date
   $('footer').append(new Date().getFullYear());
