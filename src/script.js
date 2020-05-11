@@ -134,7 +134,7 @@ $(function() {
     $projects.each(function() {
       const el = $(this).get(0);
       const top = el.getBoundingClientRect().top;
-      const isInWindow = top - window.innerHeight <= 1;
+      const isInWindow = (top - 100) - window.innerHeight <= 1;
       if (isInWindow) {
         el.classList.add('active');
       }
