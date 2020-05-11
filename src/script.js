@@ -80,7 +80,7 @@ $(function() {
 
   function createCard(project) {
     return `
-      <div class="projects__card">
+      <div class="projects__card slide-in">
           <div class="projects__card-side projects__card-side--front">
             <div class="projects__image-container">
               <img src="${project.image}" alt="${project.title}">
@@ -111,4 +111,34 @@ $(function() {
     $('#projects').append($container);
   }
   makeProjectsSection();
+
+
+  function debounce(func, wait = 20, immediate = true) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+
+
+  function slideIn() {
+    const $projects = $('.slide-in');
+    $projects.each(function() {
+      const el = $(this).get(0);
+      const top = el.getBoundingClientRect().top;
+      const isInWindow = top - window.innerHeight <= 1;
+      if (isInWindow) {
+        el.classList.add('active');
+      }
+    });
+  }
+  $(window).scroll(debounce(slideIn));
 });
