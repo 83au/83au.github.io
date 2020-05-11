@@ -69,7 +69,7 @@ html {
   -o-transition: none !important;
 }
 
-section { padding: 5rem 0; }
+section { padding: 5rem 0 3rem 0; }
 
 .loader {
   position: absolute;
@@ -753,7 +753,7 @@ footer {
 
   .skills-list {
     justify-content: space-around;
-    margin-bottom: 3rem;
+    margin-bottom: 0;
   }
 
   .skills-list li {
@@ -961,16 +961,24 @@ footer {
     transform: rotateY(-180deg);
   }
 
+  .skills-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+  }
+
+  .skills-list li {
+    width: 50%;
+  }
+
   .skills-tools {
     padding-top: 5rem;
   }
 
-  .skills-tools div:last-child {
-    margin-bottom: 0.2rem;
-  }
-
   .skills-tools h3 {
     font-size: 4.5rem;
+    margin-bottom: 7rem;
   }
 
   .columns {
