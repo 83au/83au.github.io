@@ -500,6 +500,12 @@ header {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.9;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.fa {
+  margin: 0 1rem;
 }
 
 
@@ -760,6 +766,7 @@ footer {
     font-size: 1.3rem;
     font-weight: 300;
     line-height: 2;
+    margin-left: 30%;
   }
 
   .tools {
@@ -966,10 +973,17 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 80%;
+    align-self: end;
+    margin-right: 1rem;
   }
 
   .skills-list li {
     width: 50%;
+    margin-left: 0;
+  }
+
+  .skills-list .fa {
+    margin: 0 .5rem;
   }
 
   .skills-tools {
