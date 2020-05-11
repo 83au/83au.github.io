@@ -113,7 +113,7 @@ $(function() {
   makeProjectsSection();
 
 
-  function debounce(func, wait = 20, immediate = true) {
+  function debounce(func, wait = 10, immediate = true) {
     var timeout;
     return function() {
       var context = this, args = arguments;
@@ -134,7 +134,7 @@ $(function() {
     $projects.each(function() {
       const el = $(this).get(0);
       const top = el.getBoundingClientRect().top;
-      const isInWindow = (top - 100) - window.innerHeight <= 1;
+      const isInWindow = (top - 150) - window.innerHeight <= 1;
       if (isInWindow) {
         el.classList.add('active');
       }
