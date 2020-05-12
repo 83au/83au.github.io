@@ -375,13 +375,13 @@ header {
   width: 90%;
   border-radius: 6px;
   box-shadow: 0 0 1.5rem rgba(0, 0, 0, .4);
-  transform: translateY(15rem);
+  transform: translateY(10rem);
 }
 
 .slide-in.active {
   opacity: 1;
   transform: translateY(0);
-  transition: transform .5s cubic-bezier(.34,-0.46,.46,1.93);
+  transition: .5s cubic-bezier(.39,.01,.89,1.59);
 }
 
 .projects__card-side {
@@ -517,6 +517,7 @@ header {
 .tool {
   margin: .5rem;
   padding: 1rem;
+  opacity: 0;
   width: 30%;
   transform: translateY(15rem);
 }
