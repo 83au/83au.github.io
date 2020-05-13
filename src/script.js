@@ -113,6 +113,7 @@ $(function() {
   makeProjectsSection();
 
 
+  // SCROLL EVENT LISTENER CONTROLLER
   function debounce(func, wait = 10, immediate = true) {
     var timeout;
     return function() {
@@ -129,36 +130,40 @@ $(function() {
   };
 
 
-  // MENU SLIDER ANIMATION
-  const $menuBar = $('#menu-bar');
-  const $firstMenuItem = $('.navbar__desktop-menu a:first-child').get(0);
-  const firstLeft = $firstMenuItem.getBoundingClientRect().left;
+  // INITIALIZE MENU BAR SLIDER ANIMATION
+  function initMenuBar() {
+    const $menuBar = $('#menu-bar');
+    const $firstMenuItem = $('.navbar__desktop-menu a:first-child').get(0);
+    const firstLeft = $firstMenuItem.getBoundingClientRect().left;
 
-  $menuBar.get(0).style.setProperty('--start', `${firstLeft}px`);
-  $menuBar.get(0).style.setProperty('width', `${$firstMenuItem.offsetWidth}px`);
+    $menuBar.get(0).style.setProperty('width', `${$firstMenuItem.offsetWidth}px`);
+    $menuBar.get(0).style.setProperty('--start', `${firstLeft}px`);
 
-  const sections = [...document.querySelectorAll('section')];
+    const sections = [...document.querySelectorAll('section')];
 
 
-  function animateMenuBar() {
-    sections.forEach(section => {
-      const top = section.getBoundingClientRect().top;
-      const bottom = section.getBoundingClientRect().bottom;
-      const halfWindow = window.innerHeight / 2;
-      const inWindow = top <=halfWindow && bottom > halfWindow;
-      if (!inWindow) return;
+    function animateMenuBar() {
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        const bottom = section.getBoundingClientRect().bottom;
+        const halfWindow = window.innerHeight / 2;
+        const inWindow = top <=halfWindow && bottom > halfWindow;
+        if (!inWindow) return;
 
-      const link = document.querySelector(`a[href="#${section.className}"]`);
-      const left = link.getBoundingClientRect().left;
-      $menuBar.css({
-        'transform': `translateX(${left}px)`,
-        'width': link.parentElement.offsetWidth + 'px'
+        const link = document.querySelector(`a[href="#${section.className}"]`);
+        const left = link.getBoundingClientRect().left;
+        $menuBar.css({
+          'transform': `translateX(${left}px)`,
+          'width': `${link.parentElement.offsetWidth}px`
+        });
       });
-    });
-  }
-  $(window).scroll(debounce(animateMenuBar, 20));
+    }
+    $(window).scroll(debounce(animateMenuBar, 20));
+  } 
+  initMenuBar();
+  
 
-
+  // SETUP SLIDE IN ANIMATIONS
   function slideIn() {
     const $projects = $('.slide-in');
     $projects.each(function() {

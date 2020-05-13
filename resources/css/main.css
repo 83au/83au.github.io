@@ -519,7 +519,7 @@ header {
   padding: 1rem;
   opacity: 0;
   width: 30%;
-  transform: translateY(15rem);
+  transform: translateY(10rem);
 }
 
 .tool h5 {
