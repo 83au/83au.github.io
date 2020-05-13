@@ -158,7 +158,7 @@ $(function() {
         });
       });
     }
-    $(window).scroll(debounce(animateMenuBar, 20));
+    window.addEventListener('scroll', debounce(animateMenuBar, 30));
   } 
   initMenuBar();
   
