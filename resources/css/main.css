@@ -680,7 +680,7 @@ footer {
   }
 
   #menu-bar {
-    --start: 300px;
+    --start: 280px;
     position: absolute;
     left: 0;
     bottom: 0;
