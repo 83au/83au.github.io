@@ -366,13 +366,13 @@ header {
 
 .projects__container {
   display: flex;
-  flex-direction: column;
+  overflow-x: auto;
 }
 
 .projects__card {
   opacity: 0;
-  margin: 1rem auto;
-  width: 90%;
+  margin: 1rem;
+  min-width: 90%;
   border-radius: 6px;
   box-shadow: 0 0 1.5rem rgba(0, 0, 0, .4);
   transform: translateY(10rem);
@@ -748,11 +748,6 @@ footer {
     margin: 3rem 0;
   }
 
-  .projects__container {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
   .projects__card {
     width: 45%;
   }
@@ -889,6 +884,7 @@ footer {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    overflow-x: visible;
   }
 
   .projects__card {
@@ -901,6 +897,7 @@ footer {
     perspective: 40rem;
     -moz-perspective: 40rem;
     height: 20rem;
+    min-width: 25%;
     width: 25%;
   }
 
