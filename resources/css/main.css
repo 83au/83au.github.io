@@ -367,14 +367,18 @@ header {
 .projects__container {
   display: flex;
   overflow-x: auto;
+  mask-image: linear-gradient(to right, transparent, white 10px, white 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, white 10px, white 90%, transparent);
+  -moz-mask-image: linear-gradient(to right, transparent, white 10px, white 90%, transparent);
 }
 
 .projects__card {
-  opacity: 0;
-  margin: 1rem;
-  min-width: 90%;
+  margin: 5px;
+  
   border-radius: 6px;
   box-shadow: 0 0 1.5rem rgba(0, 0, 0, .4);
+  min-width: 85%;
+  opacity: 0;
   transform: translateY(10rem);
 }
 
@@ -402,7 +406,7 @@ header {
 }
 
 .project-title {
-  margin: 2rem 0;
+  margin: 2rem .5rem;
   font-size: 1.5rem;
   font-weight: bold;
 }
