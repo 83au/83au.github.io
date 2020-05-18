@@ -28,13 +28,6 @@ $(function() {
         technologies: 'HTML, CSS, JavaScript, Webpack',
         link: 'https://github.com/83au/TrickingComboGenerator'
       },
-      {
-        image: 'resources/images/projects/virtual-tours.png',
-        title: 'Nicole\'s 3D Virtual Tours',
-        summary: 'Website for Nicole\'s 3D Virtual Tours. Users can immerse themselves in a 3D walk- through experience of properties without ever leaving their home.',
-        technologies: 'HTML, CSS, JavaScript, jQuery, Webpack',
-        link: 'https://github.com/83au/Nicole-s-3D-Virtual-Tours'
-      },
 
       {
         image: 'resources/images/projects/weather-map.png',
@@ -42,6 +35,14 @@ $(function() {
         summary: 'Click on the map or enter a location in the search field to get the current weather at those coordinates.',
         technologies: 'HTML, CSS, JavaScript, Google Maps API, Google Geolocation API, Open Weather Map API',
         link: 'https://github.com/83au/interactive_weather_map'
+      },
+      
+      {
+        image: 'resources/images/projects/virtual-tours.png',
+        title: 'Nicole\'s 3D Virtual Tours',
+        summary: 'Website for Nicole\'s 3D Virtual Tours. Users can immerse themselves in a 3D walk- through experience of properties without ever leaving their home.',
+        technologies: 'HTML, CSS, JavaScript, jQuery, Webpack',
+        link: 'https://github.com/83au/Nicole-s-3D-Virtual-Tours'
       },
 
       {
