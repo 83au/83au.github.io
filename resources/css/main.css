@@ -870,7 +870,7 @@ footer {
     justify-content: center;
     flex-wrap: wrap;
     overflow-x: visible;
-     mask-image: none;
+    mask-image: none;
     -webkit-mask-image: none;
     -moz-mask-image: none;
   }
