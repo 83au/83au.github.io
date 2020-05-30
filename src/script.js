@@ -46,14 +46,6 @@ $(function() {
       },
 
       {
-        image: 'resources/images/projects/budgety.png',
-        title: 'Budget App',
-        summary: 'An app that tracks a user\'s monthly budget. Users can input their monthly income and expenses and have their budget displayed back to them.',
-        technologies: 'HTML, CSS, JavaScript',
-        link: 'https://github.com/83au/Budget-App'
-      },
-
-      {
         image: 'resources/images/projects/color-game.png',
         title: 'Hexadecimal Color Game',
         summary: 'A color guessing game. Users are given a hexadecimal color value and have to guess which of the displayed colors it corresponds to.',
