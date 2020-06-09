@@ -4,7 +4,14 @@
   "description": "Portfolio website for Beau Sherman",
   "main": "script.js",
   "scripts": {
-    "build": "babel src -d lib"
+    "watch:sass": "sass --watch resources/scss/main.scss resources/css/main.css",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "sass resources/scss/main.scss resources/css/main.css",
+    "prefix:css": "postcss --use autoprefixer -c 'last 10 versions' resources/css/main.css -o resources/css/main.prefix.css",
+    "compress:css": "node-sass resources/css/main.prefix.css resources/css/main.min.css --output-style compressed",
+    "babel": "babel src -d lib",
+    "build": "npm-run-all compile:sass prefix:css compress:css babel"
   },
   "repository": {
     "type": "git",
@@ -20,5 +27,10 @@
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
+    "autoprefixer": "^9.8.0",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^7.0.32",
+    "postcss-cli": "^7.1.1"
   }
 }
