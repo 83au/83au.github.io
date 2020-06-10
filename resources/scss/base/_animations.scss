@@ -1,0 +1,21 @@
+/* === Key Frames === */
+
+/* @keyframes toright {
+  from { transform: translateX(-2000px); }
+  to { transform: translateX(0px); }
+}
+
+@keyframes toleft {
+  from { transform: translateX(2000px); }
+  to { transform: translateX(0px); }
+} */
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes gradient {
+  from { background-position: 50% 0%; }
+  to { background-position: 50% 100%; }
+}
