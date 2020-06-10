@@ -150,8 +150,26 @@ $(function() {
       });
     }
     window.addEventListener('scroll', debounce(animateMenuBar, 30));
-  } 
-  initMenuBar();
+  }
+
+  function menuBarController() {
+    if (window.innerWidth > 530) {
+      console.log('DESKTOP');
+      initMenuBar();
+    }
+    window.addEventListener('resize', debounce(checkMenuBar));
+
+    function checkMenuBar() {
+      const menuBar = document.querySelector('#menu-bar');
+      if (this.innerWidth > 530) {
+        if (menuBar) return;
+        initMenuBar();
+      } else {    
+        if (menuBar) menuBar.remove();
+      }
+    }
+  }
+  menuBarController();
   
 
   // SETUP SLIDE IN ANIMATIONS
