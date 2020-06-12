@@ -1,3 +1,18 @@
+/* #54D69B */
+:root {
+  /* COLORS */
+  --color-primary: #354D9E;
+  --color-secondary: #ECEDFA;
+  --color-tertiary: #BF4154;
+  /* --color-main-heading: #41E6FF; */
+  --color-main-heading: hsl(200, 100%, 70%);
+  --color-text: #0D0D0D;
+  --color-dark: hsl(200, 10%, 10%);
+  --color-light: hsl(200, 5%, 97%);
+  /* OTHER */
+  --shadow: 0 6px 6px rgba(0, 0, 0, .5);
+}
+
 /* === Key Frames === */
 /* @keyframes toright {
   from { transform: translateX(-2000px); }
@@ -27,21 +42,6 @@
 /* ============================ 
   GLOBAL 
 ============================ */
-/* #54D69B */
-:root {
-  /* COLORS */
-  --color-primary: #354D9E;
-  --color-secondary: #ECEDFA;
-  --color-tertiary: #BF4154;
-  /* --color-main-heading: #41E6FF; */
-  --color-main-heading: hsl(200, 100%, 70%);
-  --color-text: #0D0D0D;
-  --color-dark: hsl(200, 10%, 10%);
-  --color-light: hsl(200, 5%, 97%);
-  /* OTHER */
-  --shadow: 0 6px 6px rgba(0, 0, 0, .5);
-}
-
 html {
   scroll-behavior: smooth;
   -webkit-box-sizing: border-box;
@@ -63,11 +63,27 @@ html {
 section {
   padding: 5rem 0 3rem 0;
 }
+@media only screen and (min-width: 56.25em) and (orientation: landscape) {
+  section {
+    min-height: 100vh;
+  }
+}
 
 .section-para {
   margin: 3rem 0.5rem;
   line-height: 1.7;
   font-weight: normal;
+}
+@media only screen and (min-width: 33.13em) {
+  .section-para {
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+}
+@media only screen and (min-width: 56.25em) and (orientation: landscape) {
+  .section-para {
+    font-size: 1.5rem;
+  }
 }
 
 .link {
@@ -107,6 +123,11 @@ h4 {
   border-bottom: 1px solid white;
 }
 
+@media only screen and (min-width: 530px) {
+  h2, h3 {
+    font-size: 3.5rem;
+  }
+}
 /* === Navigation === */
 .navbar {
   position: fixed;
@@ -196,9 +217,55 @@ h4 {
   opacity: 1;
   transform: none;
 }
+@media only screen and (min-width: 530px) {
+  .navbar {
+    justify-content: center;
+  }
+  .navbar__burger {
+    display: none;
+  }
+  .navbar__mobile-container {
+    display: none;
+  }
+  .navbar__desktop-menu {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    line-height: 2;
+    font-size: 1.3rem;
+  }
+  .navbar__menu-bar {
+    --start: 300px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0.5rem;
+    width: 10%;
+    background-color: #41E6FF;
+    transform: translateX(var(--start));
+    transition: 0.3s ease-out;
+  }
+  .navbar__desktop-menu a {
+    padding: 0 1rem;
+    letter-spacing: 1px;
+  }
+}
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  .navbar__desktop-menu a {
+    position: relative;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    transition: 0.3s;
+  }
+  .navbar__desktop-menu a:hover {
+    color: var(--color-main-heading);
+  }
+}
 
-/* === Banner === */
-header {
+/* ============ HEADER ============ */
+.header {
   position: relative;
   top: 0;
 }
@@ -219,8 +286,7 @@ header {
   width: 100%;
   text-align: center;
 }
-
-.hero h1 {
+.hero__heading {
   margin: auto;
   background-image: linear-gradient(#5AFFCC, #41f6FF, #3366cc);
   background-size: 200% 200%;
@@ -234,8 +300,7 @@ header {
   font-size: 2.7rem;
   font-weight: bold;
 }
-
-.banner p {
+.hero__tagline {
   background-image: linear-gradient(#5AFFCC, #41f6FF, #3366cc);
   background-size: 150% 150%;
   -webkit-background-clip: text;
@@ -247,8 +312,7 @@ header {
   font-style: italic;
   font-weight: lighter;
 }
-
-.hero-button:link {
+.hero__button:link {
   display: inline-block;
   margin-top: 10rem;
   color: #121721;
@@ -257,21 +321,17 @@ header {
   text-decoration: none;
   transition: transform 100ms ease-out;
 }
-
-.hero-button:visited {
+.hero__button:visited {
   color: var(--color-primary);
   text-decoration: none;
 }
-
-.hero-button:hover {
+.hero__button:hover {
   transform: translateY(-7px) scale(1.02);
 }
-
-.hero-button:hover > button {
+.hero__button:hover > button {
   box-shadow: 0 6px 3px rgba(0, 0, 0, 0.4);
 }
-
-.hero-button button {
+.hero__button button {
   background-color: #41f6FF;
   border: none;
   border-radius: 50%;
@@ -282,6 +342,32 @@ header {
   width: 2rem;
   outline: none;
   font-size: 1rem;
+}
+@media only screen and (min-width: 530px) {
+  .hero__heading {
+    font-size: 4rem;
+  }
+  .hero__tagline {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 900px) and (orientation: landscape) {
+  .hero {
+    top: 40%;
+  }
+  .hero__heading {
+    width: 65%;
+    font-size: 4.5rem;
+  }
+  .hero__tagline {
+    font-size: 2.5rem;
+  }
+  .hero__button button {
+    top: 70%;
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 1.2rem;
+  }
 }
 
 /* === About === */
@@ -599,63 +685,8 @@ footer {
 /* === Media Queries === */
 /* Tablet */
 @media only screen and (min-width: 530px) {
-  .navbar__burger {
-    display: none;
-  }
-
-  .navbar__mobile-container {
-    display: none;
-  }
-
-  .navbar {
-    justify-content: center;
-  }
-
-  .navbar__desktop-menu {
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    width: 90%;
-    line-height: 2;
-    font-size: 1.3rem;
-  }
-
-  #menu-bar {
-    --start: 300px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 0.5rem;
-    width: 10%;
-    background-color: #41E6FF;
-    transform: translateX(var(--start));
-    transition: 0.3s ease-out;
-  }
-
-  .navbar__desktop-menu a {
-    padding: 0 1rem;
-    letter-spacing: 1px;
-  }
-
-  .section-para {
-    font-size: 1.4rem;
-    font-weight: 300;
-  }
-
-  .hero h1 {
-    font-size: 4rem;
-  }
-
-  .banner p {
-    font-size: 2rem;
-  }
-
   .about {
     padding-top: 6rem;
-  }
-
-  h2, h3 {
-    font-size: 3.5rem;
   }
 
   .about h2 {
@@ -704,7 +735,7 @@ footer {
     font-size: 1.3rem;
     font-weight: 300;
     line-height: 2;
-    margin-left: 30%;
+    margin-left: 20%;
   }
 
   .tools {
@@ -743,46 +774,6 @@ footer {
 }
 /* Desktop */
 @media only screen and (min-width: 900px) and (orientation: landscape) {
-  section {
-    min-height: 100vh;
-  }
-
-  .navbar__desktop-menu a {
-    position: relative;
-    display: block;
-    font-size: 1.5rem;
-    font-weight: lighter;
-    transition: 0.3s;
-  }
-
-  .navbar__desktop-menu a:hover {
-    color: var(--color-main-heading);
-  }
-
-  .section-para {
-    font-size: 1.5rem;
-  }
-
-  .hero {
-    top: 40%;
-  }
-
-  .hero h1 {
-    width: 65%;
-    font-size: 4.5rem;
-  }
-
-  .banner p {
-    font-size: 2.5rem;
-  }
-
-  .hero-button button {
-    top: 70%;
-    height: 2.5rem;
-    width: 2.5rem;
-    font-size: 1.2rem;
-  }
-
   .about {
     padding: 4rem 1.5rem;
   }

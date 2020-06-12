@@ -1,0 +1,132 @@
+/* ============ HEADER ============ */
+
+.header {
+  position: relative;
+  top: 0;
+}
+
+.banner {
+  padding: 0;
+  height: 100vh;
+  background-color: hsl(220, 30%, 10%);
+  /* background-image: url("../images/cartographer.png"); */
+  color: var(--color-main-heading);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.hero {
+  position: fixed;
+  top: 30%;
+  width: 100%;
+
+  text-align: center;
+
+  &__heading {
+    margin: auto;
+
+    background-image: linear-gradient(#5AFFCC, #41f6FF, hsl(220, 60%, 50%));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    animation: gradient 5s infinite alternate;
+    -webkit-animation: gradient 5s infinite alternate;
+    width: 83%;
+
+    font-family: sans-serif;
+    font-size: 2.7rem;
+    font-weight: bold;
+  }
+
+  &__tagline {
+    background-image: linear-gradient(#5AFFCC, #41f6FF, hsl(220, 60%, 50%));
+    background-size: 150% 150%;
+    -webkit-background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    animation: gradient 5s infinite alternate;
+    -webkit-animation: gradient 5s infinite alternate;
+
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: lighter;
+  }
+
+  &__button {
+    &:link {
+      display: inline-block;
+      margin-top: 10rem;
+      color: hsl(220, 30%, 10%);
+
+      animation: bounce .6s 2.5s 2;
+      -webkit-animation: bounce .6s 2.5s 2;
+      text-decoration: none;
+      transition: transform 100ms ease-out;
+    }
+
+    &:visited {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    &:hover {
+      transform: translateY(-7px) scale(1.02);
+    }
+
+    &:hover > button {
+      box-shadow: 0 6px 3px rgba(0, 0, 0, .4);
+    }
+
+    button {
+      background-color: #41f6FF;
+      border: none;
+      border-radius: 50%;
+      box-shadow: 0 6px 3px rgba(0, 0, 0, .5);
+      color: inherit;
+      cursor: pointer;
+      height: 2rem;
+      width: 2rem;
+      outline: none;
+
+      font-size: 1rem;
+    }
+  }
+
+
+  // * ========== MEDIA QUERIES ============= *
+
+  // === Tablet ===
+  @media only screen and (min-width: 530px) {
+    &__heading {
+      font-size: 4rem;
+    }
+
+    &__tagline {
+      font-size: 2rem;
+    }
+  }
+
+  // ==== Desktop ====
+  @media only screen and (min-width: 900px) and (orientation: landscape) {
+    top: 40%;
+
+    &__heading {
+      width: 65%;
+      font-size: 4.5rem;
+    }
+
+    &__tagline {
+      font-size: 2.5rem;
+    }
+
+    &__button button {
+      top: 70%;
+      height: 2.5rem;
+      width: 2.5rem;
+      font-size: 1.2rem;
+    }
+  }
+}

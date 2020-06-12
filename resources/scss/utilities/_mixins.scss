@@ -1,0 +1,11 @@
+// Tablet
+// Desktop
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == tablet {
+    @media only screen and (min-width: 33.13em) { @content }; // 530px
+  } 
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 56.25em) and (orientation: landscape) { @content }; // 900px
+  }
+}

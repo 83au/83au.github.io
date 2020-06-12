@@ -121,7 +121,7 @@ $(function() {
   // INITIALIZE MENU BAR SLIDER ANIMATION
   function initMenuBar() {
     // Create menu bar
-    const $menuBar = $('<div id="menu-bar"></div>');
+    const $menuBar = $('<div id="menu-bar" class="navbar__menu-bar"></div>');
     $('#navbar').append($menuBar.get(0));
 
     // Set starting position of menu bar

@@ -1,103 +1,12 @@
+@import "utilities/variables";
+@import "utilities/mixins";
+
 @import "base/animations";
 @import "base/base";
 
 @import "layout/navigation";
+@import "layout/header";
 
-
-/* === Banner === */
-header {
-  position: relative;
-  top: 0;
-}
-
-.banner {
-  padding: 0;
-  height: 100vh;
-  background-color: hsl(220, 30%, 10%);
-  /* background-image: url("../images/cartographer.png"); */
-  color: var(--color-main-heading);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
-.hero {
-  position: fixed;
-  top: 30%;
-  width: 100%;
-
-  text-align: center;
-}
-
-.hero h1 {
-  margin: auto;
-
-  background-image: linear-gradient(#5AFFCC, #41f6FF, hsl(220, 60%, 50%));
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-
-  animation: gradient 5s infinite alternate;
-  -webkit-animation: gradient 5s infinite alternate;
-  width: 83%;
-
-  font-family: sans-serif;
-  font-size: 2.7rem;
-  font-weight: bold;
-}
-
-.banner p {
-  background-image: linear-gradient(#5AFFCC, #41f6FF, hsl(220, 60%, 50%));
-  background-size: 150% 150%;
-  -webkit-background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-
-  animation: gradient 5s infinite alternate;
-  -webkit-animation: gradient 5s infinite alternate;
-
-  font-size: 1.3rem;
-  font-style: italic;
-  font-weight: lighter;
-}
-
-.hero-button:link {
-  display: inline-block;
-  margin-top: 10rem;
-  color: hsl(220, 30%, 10%);
-
-  animation: bounce .6s 2.5s 2;
-  -webkit-animation: bounce .6s 2.5s 2;
-  text-decoration: none;
-  transition: transform 100ms ease-out;
-}
-
-.hero-button:visited {
-  color: var(--color-primary);
-  text-decoration: none;
-}
-
-.hero-button:hover {
-  transform: translateY(-7px) scale(1.02);
-}
-
-.hero-button:hover > button {
-  box-shadow: 0 6px 3px rgba(0, 0, 0, .4);
-}
-
-.hero-button button {
-  background-color: #41f6FF;
-  border: none;
-  border-radius: 50%;
-  box-shadow: 0 6px 3px rgba(0, 0, 0, .5);
-  color: inherit;
-  cursor: pointer;
-  height: 2rem;
-  width: 2rem;
-  outline: none;
-
-  font-size: 1rem;
-}
 
 
 /* === About === */
@@ -441,63 +350,8 @@ footer {
 
   /* Tablet */
 @media only screen and (min-width: 530px) {
-  .navbar__burger {
-    display: none;
-  }
-
-  .navbar__mobile-container {
-    display: none;
-  }
-
-  .navbar {
-    justify-content: center;
-  }
-
-  .navbar__desktop-menu {
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    width: 90%;
-    line-height: 2;
-    font-size: 1.3rem;
-  }
-
-  #menu-bar {
-    --start: 300px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: .5rem;
-    width: 10%;
-    background-color: #41E6FF;
-    transform: translateX(var(--start));
-    transition: .3s ease-out;
-  }
-
-  .navbar__desktop-menu a {
-    padding: 0 1rem;
-    letter-spacing: 1px;
-  }
-
-  .section-para {
-    font-size: 1.4rem;
-    font-weight: 300;
-  }
-
-  .hero h1 {
-    font-size: 4rem;
-  }
-
-  .banner p {
-    font-size: 2rem;
-  }
-
   .about {
     padding-top: 6rem;
-  }
-
-  h2, h3 {
-    font-size: 3.5rem;
   }
 
   .about h2 {
@@ -548,7 +402,7 @@ footer {
     font-size: 1.3rem;
     font-weight: 300;
     line-height: 2;
-    margin-left: 30%;
+    margin-left: 20%;
   }
 
   .tools {
@@ -586,49 +440,8 @@ footer {
   }
 }
 
-
-  /* Desktop */
+/* Desktop */
 @media only screen and (min-width: 900px) and (orientation: landscape) {
-  section {
-    min-height: 100vh;
-  }
-
-  .navbar__desktop-menu a {
-    position: relative;
-    display: block;
-    font-size: 1.5rem;
-    font-weight: lighter;
-    transition: .3s;
-  }
-
-  .navbar__desktop-menu a:hover {
-    color: var(--color-main-heading); 
-  }
-
-  .section-para {
-    font-size: 1.5rem;
-  }
-
-  .hero {
-    top: 40%;
-  }
-
-  .hero h1 {
-    width: 65%;
-    font-size: 4.5rem;
-  }
-
-  .banner p {
-    font-size: 2.5rem;
-  }
-
-  .hero-button button {
-    top: 70%;
-    height: 2.5rem;
-    width: 2.5rem;
-    font-size: 1.2rem;
-  }
-
   .about {
     padding: 4rem 1.5rem;
   }

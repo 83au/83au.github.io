@@ -107,4 +107,61 @@
       transform: none;
     }
   }
+
+
+  // ========== MEDIA QUERIES ============
+  // === Tablet ===
+  @media only screen and (min-width: 530px) {
+    justify-content: center;
+
+    &__burger {
+      display: none;
+    }
+
+    &__mobile-container {
+      display: none;
+    }
+
+    &__desktop-menu {
+      position: relative;
+      display: flex;
+      justify-content: space-around;
+      width: 90%;
+      line-height: 2;
+      font-size: 1.3rem;
+    }
+
+    &__menu-bar {
+      --start: 300px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: .5rem;
+      width: 10%;
+      background-color: #41E6FF;
+      transform: translateX(var(--start));
+      transition: .3s ease-out;
+    }
+
+    &__desktop-menu a {
+      padding: 0 1rem;
+      letter-spacing: 1px;
+    }
+  }
+
+
+  // === Desktop ===
+  @media only screen and (min-width: 900px) and (orientation: landscape) {
+    &__desktop-menu a {
+      position: relative;
+      display: block;
+      font-size: 1.5rem;
+      font-weight: lighter;
+      transition: .3s;
+    }
+
+    &__desktop-menu a:hover {
+      color: var(--color-main-heading); 
+    }
+  }
 }
