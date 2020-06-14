@@ -4,14 +4,14 @@
   "description": "Portfolio website for Beau Sherman",
   "main": "script.js",
   "scripts": {
-    "watch:sass": "sass --watch resources/scss/main.scss resources/css/main.css",
+    "watch:sass": "sass --watch dist/resources/scss/main.scss dist/resources/css/main.css",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass",
-    "compile:sass": "sass resources/scss/main.scss resources/css/main.css",
-    "prefix:css": "postcss --use autoprefixer -c 'last 10 versions' resources/css/main.css -o resources/css/main.prefix.css",
-    "compress:css": "node-sass resources/css/main.prefix.css resources/css/main.min.css --output-style compressed",
-    "transpile": "babel src -d lib",
-    "build": "npm-run-all compile:sass prefix:css compress:css transpile"
+    "compile:sass": "sass dist/resources/scss/main.scss dist/resources/css/main.css",
+    "prefix:css": "postcss --use autoprefixer -c 'last 10 versions' dist/resources/css/main.css -o dist/resources/css/main.prefix.css",
+    "compress:css": "node-sass dist/resources/css/main.prefix.css dist/resources/css/main.min.css --output-style compressed",
+    "bundle": "webpack",
+    "build": "npm-run-all compile:sass prefix:css compress:css bundle"
   },
   "repository": {
     "type": "git",
