@@ -35,7 +35,7 @@ $(function() {
         image: 'resources/images/projects/weather-map.png',
         title: 'Interactive Weather Map',
         summary: 'An interactive map that reverse geocodes a location when you click on the map and then gives you the current weather for that area.',
-        technologies: 'HTML, CSS, JavaScript, Google Maps API, Google Geolocation API, Open Weather Map API',
+        technologies: 'HTML, CSS, JavaScript, Google Maps API, Google Geolocation API, Open Weather Map API, AWS Lambda',
         link: 'https://github.com/83au/interactive_weather_map'
       },
       
