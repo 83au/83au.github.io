@@ -26,8 +26,8 @@ $(function() {
       {
         image: './dist/resources/images/projects/tcg.jpg',
         title: 'Tricking Combo Generator',
-        summary: 'I wrote an algorithm to generate combinations of tricks from the sport of tricking. Users can choose the level of difficulty of the tricks they want in the combo.',
-        technologies: 'HTML, CSS, JavaScript, Webpack',
+        summary: 'A progressive web app that generates complex combinations of tricks from the sport of tricking. Users can choose the level of difficulty of the tricks they want in the combo.',
+        technologies: 'HTML, CSS, JavaScript, Webpack, Service Workers',
         link: 'https://github.com/83au/TrickingComboGenerator'
       },
 
