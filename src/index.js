@@ -3,7 +3,6 @@ import {
   initBurgerNav,
   initProjects,
   menuBarController,
-  debounce,
   slideIn
 } from './helpers';
 import './scss/main.scss';
