@@ -48,8 +48,7 @@ export function initProjects() {
 }
 
 
-// PRIVATE
-function debounce(func, wait = 10, immediate = true) {
+export function debounce(func, wait = 10, immediate = true) {
   var timeout;
   return function() {
     var context = this, args = arguments;
