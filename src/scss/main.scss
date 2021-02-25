@@ -7,8 +7,6 @@
 @import "layout/navigation";
 @import "layout/header";
 
-
-
 /* === About === */
 
 .about {
@@ -38,9 +36,8 @@
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.6;
-  letter-spacing: .08rem;
+  letter-spacing: 0.08rem;
 }
-
 
 /* === Projects === */
 .projects {
@@ -55,16 +52,34 @@
 .projects__container {
   display: flex;
   overflow-x: auto;
-  mask-image: linear-gradient(to right, transparent, white 10px, white 90%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, white 10px, white 90%, transparent);
-  -moz-mask-image: linear-gradient(to right, transparent, white 10px, white 90%, transparent);
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    white 10px,
+    white 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    white 10px,
+    white 90%,
+    transparent
+  );
+  -moz-mask-image: linear-gradient(
+    to right,
+    transparent,
+    white 10px,
+    white 90%,
+    transparent
+  );
 }
 
 .projects__card {
   margin: 5px;
-  
+
   border-radius: 6px;
-  box-shadow: 0 0 1.5rem rgba(0, 0, 0, .4);
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.4);
   min-width: 85%;
   opacity: 0;
   transform: translateY(10rem);
@@ -73,7 +88,7 @@
 .slide-in.active {
   opacity: 1;
   transform: translateY(0);
-  transition: .5s cubic-bezier(.39,.01,.89,1.59);
+  transition: 0.5s cubic-bezier(0.39, 0.01, 0.89, 1.59);
 }
 
 .projects__card-side {
@@ -94,7 +109,7 @@
 }
 
 .project-title {
-  margin: 2rem .5rem;
+  margin: 2rem 0.5rem;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -106,7 +121,7 @@
 .projects__project-summary {
   font-size: 1rem;
   font-weight: 400;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   line-height: 1.7;
 }
 
@@ -138,14 +153,13 @@
 }
 
 .projects__button:hover {
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .projects__more-info {
   cursor: pointer;
   text-decoration: none;
 }
-
 
 /* === Skills & Tools === */
 
@@ -161,7 +175,7 @@
   color: white;
 }
 
-@supports(background-attachment: fixed) {
+@supports (background-attachment: fixed) {
   .skills {
     background-attachment: fixed;
   }
@@ -190,10 +204,9 @@
   margin: 0 1rem;
 }
 
-
 /* === Tools === */
 .tools {
-  padding: 5rem .5rem;
+  padding: 5rem 0.5rem;
   color: var(--color-text);
   text-align: center;
 }
@@ -207,7 +220,7 @@
 }
 
 .tool {
-  margin: .5rem;
+  margin: 0.5rem;
   padding: 1rem;
   opacity: 0;
   width: 30%;
@@ -229,7 +242,6 @@
   height: 100%;
   width: 100%;
 }
-
 
 /* === Contact === */
 
@@ -267,7 +279,7 @@
 }
 
 .contact-form__field input {
-  padding: .5rem;
+  padding: 0.5rem;
   border: none;
   border-radius: 4px;
 }
@@ -276,22 +288,21 @@
   outline: auto var(--color-primary);
 }
 
-
 .contact-form__field textarea {
-  padding: .5rem;
+  padding: 0.5rem;
   border: none;
   border-radius: 4px;
 }
 
 .contact-form__submit {
-  padding: .5rem 3rem;
+  padding: 0.5rem 3rem;
   background: var(--color-primary);
   border: none;
   border-radius: 4px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, .7);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
   color: white;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 
   font-size: 1.2rem;
 }
@@ -310,8 +321,8 @@
 .contact .fa {
   margin: 2rem 0;
 
-  color: #4C4DA6;
-  transition: all .4s;
+  color: #4c4da6;
+  transition: all 0.4s;
 }
 
 .contact .fa:hover {
@@ -333,22 +344,20 @@
 }
 
 .contact p {
-  color: #4C4DA6;
-  transition: color .4s;
+  color: #4c4da6;
+  transition: color 0.4s;
 
   text-decoration: underline;
 }
-
 
 /* === Footer === */
 footer {
   text-align: center;
 }
 
-
 /* === Media Queries === */
 
-  /* Tablet */
+/* Tablet */
 @media only screen and (min-width: 530px) {
   .about {
     padding-top: 6rem;
@@ -367,12 +376,12 @@ footer {
 
   .banner .notice {
     font-size: 1rem;
-    color: #5AFFCC;
-  } 
+    color: #5affcc;
+  }
 
   .avatar {
     float: left;
-    
+
     display: block;
     margin-right: 4rem;
     margin-bottom: 2rem;
@@ -490,8 +499,8 @@ footer {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 6px;
-    box-shadow: 0 6px 1rem rgba(0, 0, 0, .4);
-    transition: all .8s cubic-bezier(.26,-0.97,.72,1.77);
+    box-shadow: 0 6px 1rem rgba(0, 0, 0, 0.4);
+    transition: all 0.8s cubic-bezier(0.26, -0.97, 0.72, 1.77);
     box-sizing: border-box;
   }
 
@@ -531,8 +540,8 @@ footer {
   }
 
   .technologies {
-    margin: .5rem;
-    font-size: .8rem;
+    margin: 0.5rem;
+    font-size: 0.8rem;
   }
 
   .projects__button {
@@ -568,7 +577,7 @@ footer {
   }
 
   .skills-list .fa {
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
   }
 
   .skills {
@@ -623,12 +632,12 @@ footer {
   }
 
   .contact-form__submit:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, .6);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     transform: translateY(-5px) scale(1.01);
   }
 
   .contact-form__submit:active {
-    box-shadow: 0 4px 4px rgba(0, 0, 0, .7);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
     transform: translateY(-0) scale(1);
     outline: none;
   }
@@ -636,7 +645,7 @@ footer {
   .icons {
     justify-content: space-around;
 
-    border: 2px solid #4C4DA6;
+    border: 2px solid #4c4da6;
     border-radius: 1rem;
     margin-top: 2rem;
     width: 70%;
