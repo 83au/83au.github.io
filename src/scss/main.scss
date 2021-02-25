@@ -456,7 +456,7 @@ footer {
   }
 
   .about h2 {
-    margin: 0 auto 4rem auto;
+    margin: 4rem auto 4rem auto;
     bottom: 1rem;
   }
 
@@ -488,6 +488,7 @@ footer {
     height: 22rem;
     min-width: 25%;
     width: 25%;
+    transform-style: preserve-3d;
   }
 
   .projects__card-side {
