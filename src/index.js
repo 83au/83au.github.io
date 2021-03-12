@@ -4,14 +4,13 @@ import {
   initProjects,
   menuBarController,
   debounce,
-  slideIn
-} from './helpers';
-import './scss/main.scss';
-
+  slideIn,
+} from "./helpers";
+import "./scss/main.scss";
 
 const main = () => {
-  $('body').removeClass('preload'); 
-  
+  $("body").removeClass("preload");
+
   // Smooth scroll for safari and ios browsers
   $('[href^="#"]').smoothScroll();
 
@@ -21,8 +20,8 @@ const main = () => {
   menuBarController();
 
   // SETUP SLIDE IN ANIMATIONS
-  $(window).scroll(debounce(slideIn));
-}
+  slideIn();
+};
 
 // **** INITIALIZE ****
 $(main);
