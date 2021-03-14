@@ -38,7 +38,7 @@ export function initProjects() {
   function makeProjectsSection() {
     const $container = $("<div></div>");
     $container.addClass("projects__container");
-    projects.forEach((project) => $container.append(createCard(project)));
+    projects.forEach(project => $container.append(createCard(project)));
     $("#projects").append($container);
   }
   makeProjectsSection();
@@ -81,12 +81,12 @@ function initMenuBar() {
     animateMenuBar,
     observerOptions
   );
-  sections.forEach((section) => {
+  sections.forEach(section => {
     sectionsObserver.observe(section);
   });
 
   function animateMenuBar(entries) {
-    entries.forEach((entry) => {
+    entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       const link = document.querySelector(
         `a[href="#${entry.target.className}"]`
@@ -117,7 +117,7 @@ export function menuBarController() {
 
 // PRIVATE
 function slideInListener(entries, observer) {
-  entries.forEach((entry) => {
+  entries.forEach(entry => {
     if (!entry.isIntersecting) return;
     entry.target.classList.add("active");
     observer.unobserve(entry.target);
