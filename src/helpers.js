@@ -27,9 +27,14 @@ export function initProjects() {
                 <p class="technologies">${project.technologies}</p>
               </div>
             </div>
-            <a class="projects__more-info" href="${project.link}">
-              <button class="projects__button" aria-label="More information">More info!</button>
-            </a>
+            <div class="projects__links">
+              <a class="projects__more-info" href="${project.github}">
+                <button class="projects__button projects__button--left" aria-label="More information">GitHub</button>
+              </a>
+              <a class="projects__more-info" href="${project.site}">
+                <button class="projects__button projects__button--right" aria-label="More information">Site</button>
+              </a>
+            </div>
           </div>
         </div>
     `;

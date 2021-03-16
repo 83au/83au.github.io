@@ -1,11 +1,11 @@
-@import "utilities/variables";
-@import "utilities/mixins";
+@import 'utilities/variables';
+@import 'utilities/mixins';
 
-@import "base/animations";
-@import "base/base";
+@import 'base/animations';
+@import 'base/base';
 
-@import "layout/navigation";
-@import "layout/header";
+@import 'layout/navigation';
+@import 'layout/header';
 
 /* === About === */
 
@@ -80,6 +80,7 @@
 
   border-radius: 6px;
   box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.4);
+  height: 47rem;
   min-width: 85%;
   opacity: 0;
   transform: translateY(10rem);
@@ -136,17 +137,33 @@
   line-height: 1.7;
 }
 
-.projects__button {
-  display: block;
-  margin: 1rem auto;
-  padding: 1rem 2.3rem;
+.projects__links {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  width: 90%;
+}
 
-  background-color: var(--color-primary);
+.projects__more-info {
+  margin-bottom: 1rem;
+  flex-basis: 50%;
+}
+
+// .projects__more-info--left {
+//   border-radius: 1rem 0 0 1rem;
+// }
+
+.projects__button {
+  padding: 0.5rem;
+
   border: none;
-  border-radius: 2.5rem;
-  outline: none;
   color: #fff;
   cursor: pointer;
+  height: 100%;
+  outline: none;
+  width: 100%;
 
   font-size: 1.3rem;
   text-decoration: none;
@@ -154,6 +171,19 @@
 
 .projects__button:hover {
   opacity: 0.9;
+}
+
+.projects__button--left {
+  background-color: var(--color-primary);
+  border-radius: 1rem 0 0 1rem;
+}
+
+.projects__button--right {
+  background-color: white;
+  border: 2px solid var(--color-primary);
+  border-left: none;
+  border-radius: 0 1rem 1rem 0;
+  color: var(--color-primary);
 }
 
 .projects__more-info {
@@ -546,13 +576,13 @@ footer {
   }
 
   .projects__button {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
+    // position: absolute;
+    // left: 50%;
+    // bottom: 0;
+    // transform: translateX(-50%);
     background: var(--color-secondary);
     color: var(--color-primary);
-    width: 12rem;
+    // width: 12rem;
   }
 
   .projects__card:hover .projects__card-side--back {
