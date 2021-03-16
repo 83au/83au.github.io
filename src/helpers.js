@@ -1,12 +1,12 @@
-import projects from "./projects";
+import projects from './projects';
 
 export function setCopyrightDate() {
-  $("footer").append(new Date().getFullYear());
+  $('footer').append(new Date().getFullYear());
 }
 
 export function initBurgerNav() {
-  $(".navbar__burger").click(() => $(".navbar__burger").toggleClass("active"));
-  $(".navbar a").click(() => $(".navbar__burger").removeClass("active"));
+  $('.navbar__burger').click(() => $('.navbar__burger').toggleClass('active'));
+  $('.navbar a').click(() => $('.navbar__burger').removeClass('active'));
 }
 
 export function initProjects() {
@@ -36,10 +36,10 @@ export function initProjects() {
   }
 
   function makeProjectsSection() {
-    const $container = $("<div></div>");
-    $container.addClass("projects__container");
+    const $container = $('<div></div>');
+    $container.addClass('projects__container');
     projects.forEach(project => $container.append(createCard(project)));
-    $("#projects").append($container);
+    $('#projects').append($container);
   }
   makeProjectsSection();
 }
@@ -64,16 +64,16 @@ export function debounce(func, wait = 10, immediate = true) {
 function initMenuBar() {
   // Create menu bar
   const $menuBar = $('<div id="menu-bar" class="navbar__menu-bar"></div>');
-  $("#navbar").append($menuBar.get(0));
+  $('#navbar').append($menuBar.get(0));
 
   // Set starting position of menu bar
-  const $firstMenuItem = $(".navbar__desktop-menu a:first-child").get(0);
+  const $firstMenuItem = $('.navbar__desktop-menu a:first-child').get(0);
   const firstLeft = $firstMenuItem.getBoundingClientRect().left;
-  $menuBar.get(0).style.setProperty("width", `${$firstMenuItem.offsetWidth}px`);
-  $menuBar.get(0).style.setProperty("--start", `${firstLeft}px`);
+  $menuBar.get(0).style.setProperty('width', `${$firstMenuItem.offsetWidth}px`);
+  $menuBar.get(0).style.setProperty('--start', `${firstLeft}px`);
 
   // Use IntersectionObserver to monitor section visibility and update menubar
-  const sections = [...document.querySelectorAll("section")];
+  const sections = [...document.querySelectorAll('section')];
   const observerOptions = {
     threshold: 0.5,
   };
@@ -102,10 +102,10 @@ function initMenuBar() {
 
 export function menuBarController() {
   if (window.innerWidth > 530) initMenuBar();
-  window.addEventListener("resize", debounce(checkMenuBar));
+  window.addEventListener('resize', debounce(checkMenuBar));
 
   function checkMenuBar() {
-    const menuBar = document.querySelector("#menu-bar");
+    const menuBar = document.querySelector('#menu-bar');
     if (this.innerWidth > 530) {
       if (menuBar) return;
       initMenuBar();
@@ -119,13 +119,13 @@ export function menuBarController() {
 function slideInListener(entries, observer) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
-    entry.target.classList.add("active");
+    entry.target.classList.add('active');
     observer.unobserve(entry.target);
   });
 }
 
 export function slideIn() {
-  const $projects = $(".slide-in");
+  const $projects = $('.slide-in');
   const slideInObserver = new IntersectionObserver(slideInListener);
   $projects.each(function () {
     const el = $(this).get(0);
