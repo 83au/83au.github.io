@@ -52,6 +52,7 @@
 .projects__container {
   display: flex;
   overflow-x: auto;
+  overflow-y: hidden;
   mask-image: linear-gradient(
     to right,
     transparent,
@@ -80,7 +81,7 @@
 
   border-radius: 6px;
   box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.4);
-  height: 47rem;
+  height: 38rem;
   min-width: 85%;
   opacity: 0;
   transform: translateY(10rem);
