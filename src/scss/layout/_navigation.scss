@@ -70,6 +70,11 @@
       margin: 2rem;
       font-size: 1.5rem;
     }
+
+    a {
+      text-decoration: none;
+      color: var(--color-light);
+    }
   }
 
   &__burger {
