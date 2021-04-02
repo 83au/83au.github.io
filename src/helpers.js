@@ -91,16 +91,20 @@ function initMenuBar() {
   });
 
   function animateMenuBar(entries) {
+    const navLinks = document.querySelectorAll('.navbar__link');
+    navLinks.forEach(link => link.classList.remove('active'));
+
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       const link = document.querySelector(
-        `a[href="#${entry.target.className}"]`
+        `a[href="#${entry.target.className}"] text`
       );
       const left = link.getBoundingClientRect().left;
       $menuBar.css({
         transform: `translateX(${left}px)`,
-        width: `${link.parentElement.offsetWidth}px`,
+        width: `${link.getBoundingClientRect().width}px`,
       });
+      link.parentElement.classList.add('active');
     });
   }
 }

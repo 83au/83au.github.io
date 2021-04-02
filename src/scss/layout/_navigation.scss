@@ -11,13 +11,22 @@
   background-color: var(--color-dark);
   z-index: 1;
 
-  a {
-    color: var(--color-light);
+  &__link {
+    height: 3rem;
+    max-width: 7.3rem;
+    fill: #555;
+    stroke: #41e6ff;
+    stroke-width: 1;
+    stroke-dasharray: 150;
+    stroke-dashoffset: 150;
+    transition: 1s;
     text-decoration: none;
-  }
 
-  a:active {
-    color: var(--color-main-heading);
+    &.active,
+    &:active,
+    &:hover {
+      stroke-dashoffset: 0;
+    }
   }
 
   &__desktop-menu {
@@ -38,14 +47,14 @@
     height: 100vh;
     text-align: center;
     transform: translateY(-60rem);
-    transition: .5s ease-out;
+    transition: 0.5s ease-out;
   }
 
   &__mobile-menu {
     height: 50vh;
     opacity: 0;
     transform: translateX(-20rem);
-    transition: .5s .5s cubic-bezier(.34,-0.46,.63,1.93);
+    transition: 0.5s 0.5s cubic-bezier(0.34, -0.46, 0.63, 1.93);
 
     li {
       margin: 2rem;
@@ -66,7 +75,7 @@
       width: 100%;
       background-color: var(--color-main-heading);
       border-radius: 6px;
-      transition: .3s;
+      transition: 0.3s;
 
       &:first-child {
         top: 0;
@@ -108,7 +117,6 @@
     }
   }
 
-
   // ========== MEDIA QUERIES ============
   // === Tablet ===
   @media only screen and (min-width: 530px) {
@@ -136,11 +144,11 @@
       position: absolute;
       left: 0;
       bottom: 0;
-      height: .5rem;
+      height: 0.5rem;
       width: 10%;
-      background-color: #41E6FF;
+      background-color: #41e6ff;
       transform: translateX(var(--start));
-      transition: .3s ease-out;
+      transition: 0.3s ease-out;
     }
 
     &__desktop-menu a {
@@ -149,19 +157,17 @@
     }
   }
 
-
   // === Desktop ===
   @media only screen and (min-width: 900px) and (orientation: landscape) {
     &__desktop-menu a {
       position: relative;
       display: block;
-      font-size: 1.5rem;
-      font-weight: lighter;
-      transition: .3s;
+      font-size: 1.7rem;
+      transition: 0.3s;
     }
 
     &__desktop-menu a:hover {
-      color: var(--color-main-heading); 
+      color: var(--color-main-heading);
     }
   }
 }
