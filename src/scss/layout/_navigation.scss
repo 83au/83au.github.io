@@ -19,14 +19,24 @@
     stroke-width: 1;
     stroke-dasharray: 150;
     stroke-dashoffset: 150;
-    transition: 1s;
+    transition: all 1s;
     text-decoration: none;
 
     &.active,
     &:active,
     &:hover {
       stroke-dashoffset: 0;
+      fill: var(--color-dark);
     }
+  }
+
+  li:nth-child(1) svg,
+  li:nth-child(2) svg {
+    max-width: 5.5rem;
+  }
+
+  li:nth-child(4) svg {
+    max-width: 4.9rem;
   }
 
   &__desktop-menu {
