@@ -215,6 +215,7 @@
 .skills-list {
   display: grid;
   margin-bottom: 1rem;
+  width: 100%;
 }
 
 .skills-list li {
@@ -397,7 +398,7 @@ footer {
     font-size: 1.3rem;
     font-weight: 300;
     line-height: 2;
-    margin-left: 20%;
+    margin-left: 30%;
   }
 
   .contact h3 {
@@ -538,16 +539,13 @@ footer {
   }
 
   .skills-list {
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 10rem;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    grid-column-gap: 15rem;
   }
 
   .skills-list li {
     margin-left: 0;
-
-    &:nth-child(even) {
-      margin-left: 5rem;
-    }
   }
 
   .skills-list .fa {
