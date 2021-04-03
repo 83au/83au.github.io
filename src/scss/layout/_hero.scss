@@ -1,10 +1,4 @@
-/* ============ HEADER ============ */
-
-.header {
-  position: relative;
-  top: 0;
-}
-
+/* ============ HERO ============ */
 .banner {
   padding: 0;
   height: 100vh;
@@ -18,6 +12,8 @@
 .hero {
   position: fixed;
   top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
 
   text-align: center;
@@ -25,7 +21,7 @@
   &__heading {
     margin: auto;
 
-    background-image: linear-gradient(#5AFFCC, #41f6FF, hsl(220, 60%, 50%));
+    background-image: linear-gradient(#5affcc, #41f6ff, hsl(220, 60%, 50%));
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-background-clip: text;
@@ -41,7 +37,7 @@
   }
 
   &__tagline {
-    background-image: linear-gradient(#5AFFCC, #41f6FF, hsl(220, 60%, 50%));
+    background-image: linear-gradient(#5affcc, #41f6ff, hsl(220, 60%, 50%));
     background-size: 150% 150%;
     -webkit-background-clip: text;
     -webkit-background-clip: text;
@@ -61,8 +57,8 @@
       margin-top: 10rem;
       color: hsl(220, 30%, 10%);
 
-      animation: bounce .6s 2.5s 2;
-      -webkit-animation: bounce .6s 2.5s 2;
+      animation: bounce 0.6s 2.5s 2;
+      -webkit-animation: bounce 0.6s 2.5s 2;
       text-decoration: none;
       transition: transform 100ms ease-out;
     }
@@ -77,14 +73,14 @@
     }
 
     &:hover > button {
-      box-shadow: 0 6px 3px rgba(0, 0, 0, .4);
+      box-shadow: 0 6px 3px rgba(0, 0, 0, 0.4);
     }
 
     button {
-      background-color: #41f6FF;
+      background-color: #41f6ff;
       border: none;
       border-radius: 50%;
-      box-shadow: 0 6px 3px rgba(0, 0, 0, .5);
+      box-shadow: 0 6px 3px rgba(0, 0, 0, 0.5);
       color: inherit;
       cursor: pointer;
       height: 2rem;
@@ -94,7 +90,6 @@
       font-size: 1rem;
     }
   }
-
 
   // * ========== MEDIA QUERIES ============= *
 

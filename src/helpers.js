@@ -97,7 +97,7 @@ function initMenuBar() {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       const link = document.querySelector(
-        `a[href="#${entry.target.className}"] text`
+        `a[href="#${entry.target.classList[0]}"] text`
       );
       const left = link.getBoundingClientRect().left;
       $menuBar.css({

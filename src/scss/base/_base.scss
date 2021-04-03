@@ -13,8 +13,8 @@
 html {
   scroll-behavior: smooth;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 
   min-height: 100%;
   min-width: 100%;
@@ -27,8 +27,13 @@ html {
   transition: none !important;
 }
 
-section { 
-  padding: 5rem 0 3rem 0; 
+.wrapper {
+  margin: auto;
+  max-width: 75rem;
+}
+
+section {
+  padding: 5rem 0 3rem 0;
 
   @include respond(desktop) {
     min-height: 100vh;
@@ -36,7 +41,7 @@ section {
 }
 
 .section-para {
-  margin: 3rem .5rem;
+  margin: 3rem 0.5rem;
   line-height: 1.7;
   font-weight: normal;
 
@@ -45,21 +50,27 @@ section {
     font-weight: 300;
   }
 
-  @include respond(desktop) { font-size: 1.5rem };
+  @include respond(desktop) {
+    font-size: 1.5rem;
+  }
 }
 
 .link {
   color: var(--color-primary);
-  transition: color .4s;
+  transition: color 0.4s;
 }
 
-.link:visited { color: var(--color-tertiary); }
+.link:visited {
+  color: var(--color-tertiary);
+}
 
-.link:hover { color: var(--color-tertiary); }
+.link:hover {
+  color: var(--color-tertiary);
+}
 
 .link:active,
 .link:focus {
-  color: #C84DA6;
+  color: #c84da6;
 }
 
 .about,
@@ -85,12 +96,12 @@ ul {
   list-style: none;
 }
 
-
 // * ============= MEDIA QUERIES ============== *
 
 // === Tablet ===
 @media only screen and (min-width: 530px) {
-  h2, h3 {
+  h2,
+  h3 {
     font-size: 3.5rem;
   }
 }

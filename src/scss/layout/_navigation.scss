@@ -1,15 +1,18 @@
 /* === Navigation === */
 
-.navbar {
+header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  background-color: var(--color-dark);
+  z-index: 1;
+}
+
+.navbar {
   display: flex;
   justify-content: flex-end;
   padding: 1rem;
-  background-color: var(--color-dark);
-  z-index: 1;
 
   &__link {
     height: 3rem;
@@ -148,7 +151,7 @@
     &__desktop-menu {
       position: relative;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       width: 90%;
       line-height: 2;
       font-size: 1.3rem;
@@ -175,8 +178,6 @@
   // === Desktop ===
   @media only screen and (min-width: 900px) and (orientation: landscape) {
     &__desktop-menu a {
-      position: relative;
-      display: block;
       font-size: 1.7rem;
       transition: 0.3s;
     }

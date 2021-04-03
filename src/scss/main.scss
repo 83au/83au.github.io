@@ -5,7 +5,7 @@
 @import 'base/base';
 
 @import 'layout/navigation';
-@import 'layout/header';
+@import 'layout/hero';
 
 /* === About === */
 
@@ -249,6 +249,10 @@
   text-decoration: none;
 }
 
+input {
+  font-family: inherit;
+}
+
 .contact-form__field {
   margin-bottom: 1rem;
   display: flex;
@@ -276,6 +280,7 @@
   padding: 0.5rem;
   border: none;
   border-radius: 4px;
+  font-family: inherit;
 }
 
 .contact-form__submit {
@@ -396,14 +401,6 @@ footer {
     font-weight: 300;
     line-height: 2;
     margin-left: 20%;
-  }
-
-  .tools {
-    padding: 4rem 1rem;
-  }
-
-  .tool {
-    width: calc(100% / 3 - 5rem);
   }
 
   .contact h3 {
@@ -588,14 +585,6 @@ footer {
     line-height: 2.5;
   }
 
-  .tools ul {
-    margin: 4rem 0;
-  }
-
-  .tool {
-    width: calc(100% / 6 - 5rem);
-  }
-
   .contact {
     padding: 2rem;
   }
@@ -625,15 +614,11 @@ footer {
 
   .icons {
     justify-content: space-around;
-
-    border: 2px solid #4c4da6;
-    border-radius: 1rem;
     margin-top: 2rem;
-    width: 70%;
   }
 
   .icons a {
-    width: 7rem;
+    width: 10rem;
   }
 
   .contact .fa {
