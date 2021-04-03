@@ -213,10 +213,8 @@
 }
 
 .skills-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   margin-bottom: 1rem;
-  width: 100%;
 }
 
 .skills-list li {
@@ -392,7 +390,6 @@ footer {
   }
 
   .skills-list {
-    justify-content: space-around;
     margin-bottom: 0;
   }
 
@@ -541,17 +538,16 @@ footer {
   }
 
   .skills-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
-    margin-right: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10rem;
   }
 
   .skills-list li {
-    width: 50%;
     margin-left: 0;
+
+    &:nth-child(even) {
+      margin-left: 5rem;
+    }
   }
 
   .skills-list .fa {
