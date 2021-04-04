@@ -1,12 +1,11 @@
 /* === Navigation === */
 
-header {
+.header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background-color: var(--color-dark);
-  height: 5rem;
   z-index: 1;
 }
 
@@ -178,6 +177,9 @@ header {
 
   // === Desktop ===
   @media only screen and (min-width: 900px) and (orientation: landscape) {
+    .header {
+      height: 5rem;
+    }
     &__desktop-menu a {
       font-size: 1.7rem;
       transition: 0.3s;
