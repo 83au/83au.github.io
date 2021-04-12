@@ -10,6 +10,15 @@ export default [
   },
 
   {
+    image: './dist/resources/images/projects/markdown-previewer.jpg',
+    title: 'Markdown Previewer',
+    summary: 'A markdown editor and previewer built with React.',
+    technologies: 'React.js, CSS, marked.js, DOMPurify',
+    github: 'https://github.com/83au/Markdown-Previewer',
+    site: 'https://83au-markdown-previewer.netlify.app/',
+  },
+
+  {
     image: './dist/resources/images/projects/weather-map.png',
     title: 'Interactive Weather Map',
     summary:
@@ -38,15 +47,5 @@ export default [
     technologies: 'HTML, CSS, JavaScript',
     github: 'https://github.com/83au/The-Great-Hexadecimal-Color-Game',
     site: 'https://www.beausherman.com/The-Great-Hexadecimal-Color-Game/',
-  },
-
-  {
-    image: './dist/resources/images/projects/plumbus.png',
-    title: 'Plumbus Landing Page',
-    summary:
-      'A parody of product landing pages using a fictional product from the comedy television show "Rick and Morty".',
-    technologies: 'HTML, CSS, JavaScript',
-    github: 'https://github.com/83au/Plumbus',
-    site: 'https://www.beausherman.com/Plumbus/',
   },
 ];
