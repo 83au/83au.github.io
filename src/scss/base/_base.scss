@@ -56,19 +56,19 @@ section {
 .link {
   color: var(--color-primary);
   transition: color 0.4s;
-}
 
-.link:visited {
-  color: var(--color-tertiary);
-}
+  &:visited {
+    color: var(--color-tertiary);
+  }
 
-.link:hover {
-  color: var(--color-tertiary);
-}
+  &:hover {
+    color: var(--color-tertiary);
+  }
 
-.link:active,
-.link:focus {
-  color: #c84da6;
+  &:active,
+  &:focus {
+    color: #c84da6;
+  }
 }
 
 .about,
@@ -97,7 +97,7 @@ ul {
 // * ============= MEDIA QUERIES ============== *
 
 // === Tablet ===
-@media only screen and (min-width: 530px) {
+@include respond(tablet) {
   h2,
   h3 {
     font-size: 3.5rem;
