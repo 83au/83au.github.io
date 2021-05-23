@@ -1,11 +1,10 @@
-@import 'utilities/variables';
-@import 'utilities/mixins';
+@use 'abstracts' as *;
 
-@import 'base/animations';
-@import 'base/base';
+@use 'base/animations';
+@use 'base/base';
 
-@import 'layout/navigation';
-@import 'layout/hero';
+@use 'layout/navigation';
+@use 'layout/hero';
 
 /* === About === */
 
