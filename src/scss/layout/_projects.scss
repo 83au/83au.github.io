@@ -1,0 +1,240 @@
+@use '../abstracts' as *;
+
+.projects {
+  text-align: center;
+
+  h3 {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  &__container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      white 10px,
+      white 90%,
+      transparent
+    );
+  }
+
+  &__card {
+    margin: 5px;
+
+    border-radius: 6px;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.4);
+    height: 38rem;
+    min-width: 85%;
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
+  &__card-side {
+    overflow: hidden;
+  }
+
+  &__card-side--front {
+    text-align: center;
+  }
+
+  &__card-side--back {
+    padding: 0.5rem;
+  }
+
+  &__image-container {
+    width: 100%;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  &__project-summary {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1.7;
+  }
+
+  &__links {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    width: 90%;
+  }
+
+  &__more-info {
+    margin-bottom: 1rem;
+    flex-basis: 50%;
+  }
+
+  &__button {
+    padding: 0.5rem;
+
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    height: 100%;
+    outline: none;
+    width: 100%;
+
+    font-size: 1.3rem;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &--left {
+      background-color: var(--color-primary);
+      border-radius: 2rem 0 0 2rem;
+    }
+
+    &--right {
+      background-color: white;
+      border: 2px solid var(--color-primary);
+      border-left: none;
+      border-radius: 0 2rem 2rem 0;
+      color: var(--color-primary);
+    }
+  }
+
+  &__more-info {
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.5s cubic-bezier(0.39, 0.01, 0.89, 1.59);
+}
+
+.project-title {
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.technologies {
+  margin: 0.5rem 0;
+  line-height: 1.7;
+
+  &-heading {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+}
+
+@include respond(tablet) {
+  .projects h3 {
+    margin: 3rem 0;
+  }
+
+  .projects__card {
+    width: 45%;
+  }
+}
+
+@include respond(desktop) {
+  .projects__container {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-x: visible;
+    overflow-y: visible;
+    mask-image: none;
+    -webkit-mask-image: none;
+    -moz-mask-image: none;
+  }
+
+  .projects__card {
+    position: relative;
+    margin: 2rem;
+
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-perspective: 40rem;
+    perspective: 40rem;
+    -moz-perspective: 40rem;
+    height: 22rem;
+    min-width: 25%;
+    width: 25%;
+    transform-style: preserve-3d;
+  }
+
+  .projects__card-side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 6px;
+    box-shadow: 0 6px 1rem rgba(0, 0, 0, 0.4);
+    transition: all 0.8s cubic-bezier(0.26, -0.97, 0.72, 1.77);
+    box-sizing: border-box;
+  }
+
+  .project-title {
+    margin-top: 3rem;
+  }
+
+  .projects__card-side--back {
+    padding: 1rem;
+    background: linear-gradient(var(--color-primary), var(--color-tertiary));
+    transform: rotateY(180deg);
+  }
+
+  .project-details {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    bottom: 5.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 1rem;
+  }
+
+  .projects__project-summary {
+    font-size: 1rem;
+    color: #fff;
+  }
+
+  .technologies-heading {
+    margin-top: 1rem;
+  }
+
+  .technologies-heading,
+  .technologies {
+    color: #fff;
+  }
+
+  .technologies {
+    margin: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .projects__button--right {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+  }
+
+  .projects__card:hover .projects__card-side--back {
+    transform: rotateY(0);
+  }
+
+  .projects__card:hover .projects__card-side--front {
+    transform: rotateY(-180deg);
+  }
+}
