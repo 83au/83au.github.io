@@ -31,8 +31,12 @@ export function initProjects() {
               <a class="projects__more-info" href="${project.github}">
                 <button class="projects__button projects__button--left" aria-label="More information">GitHub</button>
               </a>
-              <a class="projects__more-info" href="${project.site}">
-                <button class="projects__button projects__button--right" aria-label="More information">Site</button>
+              <a class="projects__more-info ${
+                !project.site && 'projects__more-info--retired'
+              }" href="${project.site}">
+                <button class="projects__button projects__button--right ${
+                  !project.site && 'projects__button--retired'
+                }" aria-label="More information">Site</button>
               </a>
             </div>
           </div>

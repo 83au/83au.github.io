@@ -33,10 +33,10 @@ export default [
     image: './dist/resources/images/projects/virtual-tours.png',
     title: "Nicole's 3D Virtual Tours",
     summary:
-      'A multi-page website filled with media of all types including: image, video, and iframes. This was my first paid project.',
+      'A multi-page website filled with media of all types including: image, video, and iframes. This was my first paid project, and the site has since been retired.',
     technologies: 'HTML, CSS, JavaScript, jQuery, Webpack',
     github: 'https://github.com/83au/Nicole-s-3D-Virtual-Tours',
-    site: 'https://www.nicoles3dvirtualtours.com/',
+    site: null,
   },
 
   {

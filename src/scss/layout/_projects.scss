@@ -72,6 +72,10 @@
   &__more-info {
     margin-bottom: 1rem;
     flex-basis: 50%;
+
+    &--retired {
+      pointer-events: none;
+    }
   }
 
   &__button {
@@ -102,6 +106,10 @@
       border-left: none;
       border-radius: 0 2rem 2rem 0;
       color: var(--color-primary);
+    }
+
+    &--retired {
+      text-decoration: line-through;
     }
   }
 
