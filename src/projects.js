@@ -46,6 +46,6 @@ export default [
       'A color guessing game. Users are given a hexadecimal color value and have to guess which of the displayed colors it corresponds to.',
     technologies: 'HTML, CSS, JavaScript',
     github: 'https://github.com/83au/The-Great-Hexadecimal-Color-Game',
-    site: 'https://www.beausherman.com/The-Great-Hexadecimal-Color-Game/',
+    site: 'https://www.beausherman.dev/The-Great-Hexadecimal-Color-Game/',
   },
 ];
